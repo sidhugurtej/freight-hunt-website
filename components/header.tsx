@@ -4,9 +4,17 @@ import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Menu } from "lucide-react"
 import { Logo } from "@/components/logo"
 import { cn } from "@/lib/utils"
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle,
+  SheetDescription,
+  SheetHeader,
+} from "@/components/ui/sheet"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -31,14 +39,50 @@ export function Header() {
         </div>
 
         <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <Menu className="h-6 w-6" aria-hidden="true" />
-          </button>
+          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+            <SheetTrigger asChild>
+              <button
+                type="button"
+                className="inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
+              >
+                <span className="sr-only">Open main menu</span>
+                <Menu className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-full sm:max-w-full border-l-0 p-0">
+              <SheetHeader className="px-6 py-4 border-b border-border text-left">
+                <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
+                <SheetDescription className="sr-only">Navigation menu for mobile devices</SheetDescription>
+                <Link href="/" className="flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
+                  <Logo className="w-48 h-12" />
+                </Link>
+              </SheetHeader>
+              <div className="flex flex-col h-full px-6 py-6">
+                <div className="space-y-2">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className={cn(
+                        "block rounded-lg px-3 py-3 text-lg font-medium transition-colors",
+                        pathname === item.href ? "text-primary bg-primary/5" : "text-foreground hover:bg-muted",
+                      )}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+                <div className="mt-8">
+                  <Button className="w-full text-lg h-12" asChild>
+                    <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
+                      Get a Quote
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
 
         <div className="hidden lg:flex lg:gap-x-6">
@@ -62,50 +106,6 @@ export function Header() {
           </Button>
         </div>
       </nav>
-
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-[9999]">
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9998]" onClick={() => setMobileMenuOpen(false)} />
-          <div className="fixed top-0 right-0 w-full max-w-sm bg-white dark:bg-zinc-950 px-6 py-6 border-l border-b border-border shadow-2xl rounded-bl-2xl z-[9999]">
-            <div className="flex items-center justify-between">
-              <Link href="/" className="flex items-center gap-3">
-                <Logo className="w-48 h-12" />
-              </Link>
-              <button
-                type="button"
-                className="rounded-md p-2.5 text-foreground"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <span className="sr-only">Close menu</span>
-                <X className="h-6 w-6" aria-hidden="true" />
-              </button>
-            </div>
-            <div className="mt-6 flow-root">
-              <div className="space-y-2 py-6">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={cn(
-                      "block rounded-lg px-3 py-2 text-base font-medium transition-colors",
-                      pathname === item.href ? "text-primary bg-primary/10" : "text-foreground hover:bg-muted",
-                    )}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-              <div className="py-6">
-                <Button className="w-full" asChild>
-                  <Link href="/contact">Get a Quote</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </header>
   )
 }
