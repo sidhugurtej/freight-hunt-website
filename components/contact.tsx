@@ -1,141 +1,77 @@
 "use client"
 
-import type React from "react"
-
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { Mail, Phone, Package, Truck } from "lucide-react"
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
-  }
-
   return (
-    <section id="contact" className="py-24 bg-muted/50">
+    <section id="contact" className="py-24 bg-muted/30">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-3">Contact Us</p>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-            Let's Start a Conversation
+            Get in Touch Instantly
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            Reach out directly via phone or email. We're available 24/7 for immediate assistance.
           </p>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-2">
-          <div>
-            <Card className="border-0 bg-card shadow-lg">
-              <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid gap-6 sm:grid-cols-2">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Full Name</Label>
-                      <Input
-                        id="name"
-                        placeholder="John Doe"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="john@company.com"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="company">Company (Optional)</Label>
-                    <Input
-                      id="company"
-                      placeholder="Your Company Name"
-                      value={formData.company}
-                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Tell us about your freight needs..."
-                      rows={5}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      required
-                    />
-                  </div>
-                  <Button type="submit" size="lg" className="w-full gap-2">
-                    <Send className="h-4 w-4" />
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-xl font-semibold text-foreground mb-6">Get in Touch</h3>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 flex-shrink-0">
-                    <Mail className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Email</p>
-                    <p className="text-muted-foreground">info@freighthunt.us</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 flex-shrink-0">
-                    <Phone className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Phone</p>
-                    <p className="text-muted-foreground">(555) 123-4567</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 flex-shrink-0">
-                    <MapPin className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">Location</p>
-                    <p className="text-muted-foreground">Serving all 48 contiguous states</p>
-                  </div>
-                </div>
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {/* Call Us Card */}
+          <Card className="border-2 border-primary shadow-xl hover:shadow-2xl transition-shadow">
+            <CardContent className="p-8 text-center">
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground mx-auto mb-6">
+                <Phone className="h-8 w-8" />
               </div>
-            </div>
-
-            <div className="bg-secondary/50 rounded-xl p-6">
-              <h4 className="font-semibold text-foreground mb-2">Quick Response</h4>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Our team typically responds within 2 hours during business hours. For urgent freight needs, call us
-                directly for immediate assistance.
+              <h3 className="text-2xl font-bold text-foreground mb-2">Call Us Now</h3>
+              <p className="text-muted-foreground mb-6">
+                Speak with our team immediately. Available 24/7, 365 days a year.
               </p>
-            </div>
-          </div>
+              <div className="space-y-3">
+                <Button size="lg" className="w-full text-lg" asChild>
+                  <a href="tel:+18005554868">
+                    <Phone className="h-5 w-5 mr-2" />
+                    (800) 555-HUNT
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="w-full text-lg" asChild>
+                  <a href="tel:+18005554285">
+                    <Truck className="h-5 w-5 mr-2" />
+                    Carrier Hotline
+                  </a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Email Us Card */}
+          <Card className="border-2 border-primary shadow-xl hover:shadow-2xl transition-shadow">
+            <CardContent className="p-8 text-center">
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground mx-auto mb-6">
+                <Mail className="h-8 w-8" />
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-2">Email Us</h3>
+              <p className="text-muted-foreground mb-6">
+                Send us a message and we'll respond within 30 minutes during business hours.
+              </p>
+              <div className="space-y-3">
+                <Button size="lg" className="w-full text-lg" asChild>
+                  <a href="mailto:quotes@freighthunt.us">
+                    <Package className="h-5 w-5 mr-2" />
+                    Get a Quote
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="w-full text-lg" asChild>
+                  <a href="mailto:info@freighthunt.us">
+                    <Mail className="h-5 w-5 mr-2" />
+                    General Inquiries
+                  </a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

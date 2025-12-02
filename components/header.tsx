@@ -22,7 +22,7 @@ export function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="flex items-center gap-3">
@@ -65,9 +65,9 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-50">
-          <div className="fixed inset-0 bg-background/80 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />
-          <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-background px-6 py-6 border-l border-border">
+        <div className="lg:hidden fixed inset-0 z-[9999]">
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9998]" onClick={() => setMobileMenuOpen(false)} />
+          <div className="fixed top-0 right-0 w-full max-w-sm bg-white dark:bg-zinc-950 px-6 py-6 border-l border-b border-border shadow-2xl rounded-bl-2xl z-[9999]">
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center gap-3">
                 <Logo className="w-48 h-12" />
