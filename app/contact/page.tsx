@@ -224,7 +224,7 @@ export default function ContactPage() {
                   <div className="space-y-2">
                     {emailContacts.map((contact) => (
                       <a
-                        key={contact.email}
+                        key={contact.label}
                         href={`mailto:${contact.email}?subject=${contact.subject}`}
                         className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors group"
                       >
