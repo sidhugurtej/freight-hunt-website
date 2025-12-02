@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export function Hero() {
   return (
@@ -14,10 +15,9 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-              <span className="text-[#1e3a8a]">Connecting Shippers</span>
-              <br />
-              <span className="text-[#dc2626]">& Carriers Nationwide</span>
+            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-foreground drop-shadow-sm">
+              <span className="text-[#1e3a8a]">Connecting Shippers & Carriers</span>{" "}
+              <span className="text-[#dc2626]">Nationwide</span>
             </h1>
 
             <p className="text-xl leading-relaxed text-muted-foreground max-w-xl">
@@ -25,17 +25,9 @@ export function Hero() {
               efficient transportation solutions across America.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="gap-2 text-lg px-8" asChild>
-                <a href="/contact">
-                  Get a Free Quote
-                  <ArrowRight className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8" asChild>
-                <a href="/about">
-                  Learn More
-                </a>
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Button size="lg" className="h-12 px-8 text-lg" asChild>
+                <Link href="/contact">Get in Touch</Link>
               </Button>
             </div>
 

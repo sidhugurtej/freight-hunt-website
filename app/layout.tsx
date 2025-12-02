@@ -11,7 +11,10 @@ export const metadata: Metadata = {
   title: "Freight Hunt | Connecting Shippers and Carriers",
   description:
     "FreightHunt is your trusted freight brokerage partner. We connect shippers with reliable carriers for seamless load selection and transportation solutions.",
-  keywords: "freight brokerage, load selection, shippers, carriers, freight transportation, logistics"
+  keywords: "freight brokerage, load selection, shippers, carriers, freight transportation, logistics",
+  icons: {
+    icon: "/icon.svg",
+  },
 }
 
 export default function RootLayout({

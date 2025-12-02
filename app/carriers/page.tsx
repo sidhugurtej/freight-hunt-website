@@ -87,9 +87,6 @@ export default function CarriersPage() {
                 <Button size="lg" asChild>
                   <Link href="/contact">Join Our Network</Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link href="/load-board">View Available Loads</Link>
-                </Button>
               </div>
             </div>
             <div className="relative">
