@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
       <div className="mx-auto max-w-7xl w-full px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen py-20 pt-32 lg:pt-20">
           {/* Left Content */}
           <div className="space-y-8">
             <div>
