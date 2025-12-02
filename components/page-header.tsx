@@ -14,7 +14,7 @@ export function PageHeader({ title, description, badge }: PageHeaderProps) {
               {badge}
             </span>
           )}
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">{title}</h1>
+          <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl text-balance">{title}</h1>
           <p className="mt-6 text-lg leading-8 text-muted-foreground text-pretty">{description}</p>
         </div>
       </div>

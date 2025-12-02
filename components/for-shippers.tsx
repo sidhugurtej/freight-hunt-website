@@ -31,7 +31,7 @@ export function ForShippers() {
 
           <div>
             <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-3">For Shippers</p>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+            <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl text-balance">
               Move Your Freight with Confidence
             </h2>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">

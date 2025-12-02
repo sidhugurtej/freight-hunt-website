@@ -75,7 +75,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground mb-6">Our Story</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-primary mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Freight Hunt was born from a simple observation: the freight industry needed a better way to connect
@@ -117,7 +117,7 @@ export default function AboutPage() {
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10">
                     <Target className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground">Our Mission</h3>
+                  <h3 className="text-2xl font-bold text-primary">Our Mission</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
                   To provide exceptional freight brokerage services that connect shippers with reliable carriers,
@@ -132,7 +132,7 @@ export default function AboutPage() {
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10">
                     <Eye className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground">Our Vision</h3>
+                  <h3 className="text-2xl font-bold text-primary">Our Vision</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
                   To be the most trusted name in freight brokerage, recognized for our unwavering commitment to service
@@ -163,7 +163,7 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground mb-4">Our Core Values</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-primary mb-4">Our Core Values</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               These principles guide everything we do at Freight Hunt.
             </p>
@@ -175,7 +175,7 @@ export default function AboutPage() {
                   <div className="flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mx-auto mb-4">
                     <value.icon className="h-7 w-7 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{value.title}</h3>
+                  <h3 className="text-lg font-semibold text-primary mb-2">{value.title}</h3>
                   <p className="text-sm text-muted-foreground">{value.description}</p>
                 </CardContent>
               </Card>
@@ -188,7 +188,7 @@ export default function AboutPage() {
       <section className="py-20 bg-muted/30">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground mb-4">Meet Our Leadership</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-primary mb-4">Meet Our Leadership</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Our experienced team brings decades of logistics expertise to serve you.
             </p>
@@ -204,7 +204,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-foreground">{member.name}</h3>
+                  <h3 className="font-semibold text-primary">{member.name}</h3>
                   <p className="text-sm text-primary mb-2">{member.role}</p>
                   <p className="text-sm text-muted-foreground">{member.bio}</p>
                 </CardContent>

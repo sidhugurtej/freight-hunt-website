@@ -22,7 +22,7 @@ const faqCategories = [
       {
         question: "How do I get a freight quote?",
         answer:
-          "Getting a quote is easy! Simply contact us via phone at (800) 555-HUNT, email us at info@freighthunt.us, or fill out our online contact form. Provide your origin, destination, commodity type, weight, and desired pickup date, and we'll provide competitive rates.",
+          "Getting a quote is easy! Simply contact us via phone at (817) 256-8492, email us at freighthunt001@gmail.com, or fill out our online contact form. Provide your origin, destination, commodity type, weight, and desired pickup date, and we'll provide competitive rates.",
       },
       {
         question: "What types of freight do you handle?",
@@ -62,7 +62,7 @@ const faqCategories = [
       {
         question: "How do I sign up as a carrier?",
         answer:
-          "Contact our carrier relations team at (800) 555-HUNT or complete our online carrier application. We'll verify your authority, insurance, and safety record. Approved carriers can start hauling loads within 24 hours.",
+          "Contact our carrier relations team at (817) 256-8492 or complete our online carrier application. We'll verify your authority, insurance, and safety record. Approved carriers can start hauling loads within 24 hours.",
       },
       {
         question: "What are your payment terms for carriers?",
@@ -98,7 +98,7 @@ export default function FAQPage() {
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
           {faqCategories.map((category) => (
             <div key={category.title} className="mb-12">
-              <h2 className="text-2xl font-bold text-foreground mb-6">{category.title}</h2>
+              <h2 className="text-2xl font-bold text-primary mb-6">{category.title}</h2>
               <Accordion type="single" collapsible className="space-y-4">
                 {category.faqs.map((faq, index) => (
                   <AccordionItem
@@ -121,7 +121,7 @@ export default function FAQPage() {
       {/* CTA */}
       <section className="py-16 bg-muted/30">
         <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-foreground mb-4">Still Have Questions?</h2>
+          <h2 className="text-2xl font-bold tracking-tight text-primary mb-4">Still Have Questions?</h2>
           <p className="text-muted-foreground mb-8">
             Our team is here to help. Contact us and we'll get back to you within 2 hours.
           </p>

@@ -156,7 +156,7 @@ export default function ServicesPage() {
                       <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10">
                         <service.icon className="h-7 w-7 text-primary" />
                       </div>
-                      <h2 className="text-2xl font-bold text-foreground">{service.title}</h2>
+                      <h2 className="text-2xl font-bold text-primary">{service.title}</h2>
                     </div>
                     <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
                     <ul className="space-y-3 mb-6">
@@ -208,7 +208,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-muted/30">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground mb-4">Why Choose Freight Hunt?</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-primary mb-4">Why Choose Freight Hunt?</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               We go beyond just moving freight. We become an extension of your team.
             </p>
@@ -220,7 +220,7 @@ export default function ServicesPage() {
                   <div className="flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mx-auto mb-4">
                     <item.icon className="h-7 w-7 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-semibold text-primary mb-2">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.description}</p>
                 </CardContent>
               </Card>

@@ -22,23 +22,23 @@ const contactInfo = [
   {
     icon: Building2,
     title: "Main Office",
-    details: ["1234 Logistics Parkway", "Suite 500", "Dallas, TX 75201"],
+    details: ["11701 Sky Blue Ct", "Haslet, TX 76052"],
     description: "Corporate Headquarters",
   },
   {
     icon: Headphones,
     title: "Quotes & Operations",
-    details: ["(800) 555-HUNT (4868)"],
+    details: ["(817) 256-8492"],
     description: "Available 24/7 - Never Closed",
     highlight: true,
-    phone: "tel:+18005554868",
+    phone: "tel:+18172568492",
   },
   {
     icon: Truck,
     title: "Carrier Support",
-    details: ["(800) 555-HAUL (4285)"],
+    details: ["(817) 256-8492"],
     description: "Dedicated carrier dispatch line",
-    phone: "tel:+18005554285",
+    phone: "tel:+18172568492",
   },
   {
     icon: Clock,
@@ -49,11 +49,11 @@ const contactInfo = [
 ]
 
 const emailContacts = [
-  { icon: Package, email: "quotes@freighthunt.us", label: "Get a Quote" },
-  { icon: Truck, email: "carriers@freighthunt.us", label: "Carrier Onboarding" },
-  { icon: Users, email: "sales@freighthunt.us", label: "Sales Inquiries" },
-  { icon: Briefcase, email: "careers@freighthunt.us", label: "Career Opportunities" },
-  { icon: Mail, email: "info@freighthunt.us", label: "General Inquiries" },
+  { icon: Package, email: "freighthunt001@gmail.com", label: "Get a Quote", subject: "Freight Quote Request" },
+  { icon: Truck, email: "freighthunt001@gmail.com", label: "Carrier Onboarding", subject: "Carrier Onboarding Application" },
+  { icon: Users, email: "freighthunt001@gmail.com", label: "Sales Inquiries", subject: "Sales Inquiry" },
+  { icon: Briefcase, email: "freighthunt001@gmail.com", label: "Career Opportunities", subject: "Career Opportunity" },
+  { icon: Mail, email: "freighthunt001@gmail.com", label: "General Inquiries", subject: "General Inquiry" },
 ]
 
 export default function ContactPage() {
@@ -71,7 +71,7 @@ export default function ContactPage() {
       <section className="py-16 bg-muted/30">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Get in Touch Instantly</h2>
+            <h2 className="text-3xl font-bold text-primary mb-4">Get in Touch Instantly</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Choose your preferred method of contact. We're available 24/7 for immediate assistance.
             </p>
@@ -84,19 +84,19 @@ export default function ContactPage() {
                 <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground mx-auto mb-6">
                   <Phone className="h-8 w-8" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">Call Us Now</h3>
+                <h3 className="text-2xl font-bold text-primary mb-2">Call Us Now</h3>
                 <p className="text-muted-foreground mb-6">
                   Speak with our team immediately. Available 24/7, 365 days a year.
                 </p>
                 <div className="space-y-3">
                   <Button size="lg" className="w-full text-lg" asChild>
-                    <a href="tel:+18005554868">
+                    <a href="tel:+18172568492">
                       <Phone className="h-5 w-5 mr-2" />
-                      (800) 555-HUNT
+                      (817) 256-8492
                     </a>
                   </Button>
                   <Button size="lg" variant="outline" className="w-full text-lg" asChild>
-                    <a href="tel:+18005554285">
+                    <a href="tel:+18172568492">
                       <Truck className="h-5 w-5 mr-2" />
                       Carrier Hotline
                     </a>
@@ -111,19 +111,19 @@ export default function ContactPage() {
                 <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground mx-auto mb-6">
                   <Mail className="h-8 w-8" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">Email Us</h3>
+                <h3 className="text-2xl font-bold text-primary mb-2">Email Us</h3>
                 <p className="text-muted-foreground mb-6">
                   Send us a message and we'll respond within 30 minutes during business hours.
                 </p>
                 <div className="space-y-3">
                   <Button size="lg" className="w-full text-lg" asChild>
-                    <a href="mailto:quotes@freighthunt.us">
+                    <a href="mailto:freighthunt001@gmail.com?subject=Freight Quote Request">
                       <Package className="h-5 w-5 mr-2" />
                       Get a Quote
                     </a>
                   </Button>
                   <Button size="lg" variant="outline" className="w-full text-lg" asChild>
-                    <a href="mailto:info@freighthunt.us">
+                    <a href="mailto:freighthunt001@gmail.com?subject=General Inquiry">
                       <Mail className="h-5 w-5 mr-2" />
                       General Inquiries
                     </a>
@@ -141,7 +141,7 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Cards */}
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Contact Information</h2>
+              <h2 className="text-2xl font-bold text-primary mb-6">Contact Information</h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 {contactInfo.map((item) => (
                   <Card
@@ -163,7 +163,7 @@ export default function ContactPage() {
                               <item.icon className={cn("h-6 w-6", !item.highlight && "text-primary")} />
                             </div>
                             <div>
-                              <h3 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
+                              <h3 className="font-semibold text-primary mb-1 group-hover:text-primary transition-colors">
                                 {item.title}
                               </h3>
                               {item.details.map((detail) => (
@@ -193,7 +193,7 @@ export default function ContactPage() {
                             <item.icon className={cn("h-6 w-6", !item.highlight && "text-primary")} />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
+                            <h3 className="font-semibold text-primary mb-1">{item.title}</h3>
                             {item.details.map((detail) => (
                               <p key={detail} className="text-foreground text-sm">
                                 {detail}
@@ -218,14 +218,14 @@ export default function ContactPage() {
 
             {/* Email Directory */}
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Email Directory</h2>
+              <h2 className="text-2xl font-bold text-primary mb-6">Email Directory</h2>
               <Card className="border-0 shadow-md">
                 <CardContent className="p-6">
                   <div className="space-y-2">
                     {emailContacts.map((contact) => (
                       <a
                         key={contact.email}
-                        href={`mailto:${contact.email}`}
+                        href={`mailto:${contact.email}?subject=${contact.subject}`}
                         className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors group"
                       >
                         <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
@@ -260,14 +260,14 @@ export default function ContactPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="tel:+18005554868"
+                href="tel:+18172568492"
                 className="inline-flex items-center justify-center gap-2 bg-white text-primary font-semibold px-6 py-3 rounded-lg hover:bg-white/90 transition-colors"
               >
                 <Phone className="h-5 w-5" />
-                (800) 555-HUNT
+                (817) 256-8492
               </a>
               <a
-                href="tel:+18005554285"
+                href="tel:+18172568492"
                 className="inline-flex items-center justify-center gap-2 bg-primary-foreground/10 text-primary-foreground font-semibold px-6 py-3 rounded-lg border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-colors"
               >
                 <Truck className="h-5 w-5" />

@@ -73,7 +73,7 @@ export default function CarriersPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground mb-6">
+              <h2 className="text-3xl font-bold tracking-tight text-primary mb-6">
                 Why Carriers Love Working with Us
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -100,7 +100,7 @@ export default function CarriersPage() {
       <section className="py-20 bg-muted/30">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground mb-4">Carrier Benefits</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-primary mb-4">Carrier Benefits</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               We invest in our carrier relationships because we know that's what keeps freight moving.
             </p>
@@ -112,7 +112,7 @@ export default function CarriersPage() {
                   <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4">
                     <benefit.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{benefit.title}</h3>
+                  <h3 className="text-lg font-semibold text-primary mb-2">{benefit.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </CardContent>
               </Card>
@@ -125,7 +125,7 @@ export default function CarriersPage() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground mb-4">Equipment We Need</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-primary mb-4">Equipment We Need</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               We work with a variety of equipment types. If you have quality equipment and a commitment to service, we
               want to hear from you.
@@ -139,7 +139,7 @@ export default function CarriersPage() {
                     <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10">
                       <Truck className="h-6 w-6 text-primary" />
                     </div>
-                    <span className="font-semibold text-foreground">{equipment.name}</span>
+                    <span className="font-semibold text-primary">{equipment.name}</span>
                   </div>
                   <span className="text-sm text-primary font-medium">{equipment.loads}</span>
                 </CardContent>
@@ -154,7 +154,7 @@ export default function CarriersPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground mb-6">Carrier Requirements</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-primary mb-6">Carrier Requirements</h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
                 To join the Freight Hunt carrier network, you'll need to meet the following minimum requirements. These
                 standards help us maintain the quality and reliability our shippers expect.
@@ -163,7 +163,7 @@ export default function CarriersPage() {
                 {requirements.map((req) => (
                   <li key={req} className="flex items-start gap-3">
                     <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                    <span className="text-foreground">{req}</span>
+                    <span className="text-primary">{req}</span>
                   </li>
                 ))}
               </ul>
@@ -173,7 +173,7 @@ export default function CarriersPage() {
                 <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mx-auto mb-6">
                   <Shield className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground text-center mb-4">Ready to Get Started?</h3>
+                <h3 className="text-xl font-bold text-primary text-center mb-4">Ready to Get Started?</h3>
                 <p className="text-muted-foreground text-center mb-6">
                   Our onboarding process is quick and easy. Get set up and start hauling loads in as little as 24 hours.
                 </p>
@@ -181,7 +181,7 @@ export default function CarriersPage() {
                   <Link href="/contact">Apply Now</Link>
                 </Button>
                 <p className="text-sm text-muted-foreground text-center mt-4">
-                  Or call us at <span className="font-semibold">(800) 555-HUNT</span>
+                  Or call us at <span className="font-semibold">(817) 256-8492</span>
                 </p>
               </CardContent>
             </Card>

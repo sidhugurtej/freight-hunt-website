@@ -17,7 +17,7 @@ export function ForCarriers() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           <div className="order-2 lg:order-1">
             <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-3">For Carriers</p>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+            <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl text-balance">
               Keep Your Trucks Moving
             </h2>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">

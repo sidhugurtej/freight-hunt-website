@@ -22,7 +22,7 @@ export function HowItWorks() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-3">How It Works</p>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl text-balance">
             Simple, Transparent Process
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -40,7 +40,7 @@ export function HowItWorks() {
                 <div className="flex items-center justify-center w-24 h-24 rounded-full bg-primary text-primary-foreground text-3xl font-bold mb-6 relative z-10">
                   {step.number}
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">{step.title}</h3>
+                <h3 className="text-xl font-semibold text-primary mb-3">{step.title}</h3>
                 <p className="text-muted-foreground leading-relaxed max-w-xs">{step.description}</p>
               </div>
             </div>

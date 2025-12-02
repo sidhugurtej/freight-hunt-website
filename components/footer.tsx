@@ -47,15 +47,15 @@ export function Footer() {
             <div className="mt-6 space-y-3">
               <div className="flex items-center gap-3 text-background/70">
                 <Phone className="h-4 w-4" />
-                <span className="text-sm">(800) 555-HUNT</span>
+                <span className="text-sm">(817) 256-8492</span>
               </div>
               <div className="flex items-center gap-3 text-background/70">
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">info@freighthunt.us</span>
+                <span className="text-sm">freighthunt001@gmail.com</span>
               </div>
               <div className="flex items-center gap-3 text-background/70">
                 <MapPin className="h-4 w-4" />
-                <span className="text-sm">Nationwide Coverage</span>
+                <span className="text-sm">11701 Sky Blue Ct, Haslet, TX 76052</span>
               </div>
             </div>
           </div>

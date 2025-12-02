@@ -15,7 +15,7 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-foreground drop-shadow-sm">
+            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-primary drop-shadow-sm">
               <span className="text-[#1e3a8a]">Connecting Shippers & Carriers</span>{" "}
               <span className="text-[#dc2626]">Nationwide</span>
             </h1>

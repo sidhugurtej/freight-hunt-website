@@ -91,7 +91,7 @@ export default function ShippersPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground mb-6">
+              <h2 className="text-3xl font-bold tracking-tight text-primary mb-6">
                 Why Shippers Choose Freight Hunt
               </h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
@@ -119,7 +119,7 @@ export default function ShippersPage() {
       <section className="py-20 bg-muted/30">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground mb-4">The Freight Hunt Advantage</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-primary mb-4">The Freight Hunt Advantage</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Experience the benefits of working with a freight broker that puts your needs first.
             </p>
@@ -131,7 +131,7 @@ export default function ShippersPage() {
                   <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4">
                     <benefit.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{benefit.title}</h3>
+                  <h3 className="text-lg font-semibold text-primary mb-2">{benefit.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </CardContent>
               </Card>
@@ -144,7 +144,7 @@ export default function ShippersPage() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground mb-4">How It Works</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-primary mb-4">How It Works</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Shipping with Freight Hunt is simple. Here's how we make it easy.
             </p>
@@ -153,7 +153,7 @@ export default function ShippersPage() {
             {process.map((item, index) => (
               <div key={item.step} className="relative">
                 <div className="text-6xl font-bold text-primary/10 mb-4">{item.step}</div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                <h3 className="text-lg font-semibold text-primary mb-2">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.description}</p>
                 {index < process.length - 1 && (
                   <ArrowRight className="hidden lg:block absolute top-8 -right-4 h-6 w-6 text-primary/30" />
@@ -169,7 +169,7 @@ export default function ShippersPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground mb-6">Industries We Serve</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-primary mb-6">Industries We Serve</h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
                 We have experience shipping freight for businesses across a wide range of industries. No matter what
                 you're moving, we have the expertise to handle it.
@@ -212,7 +212,7 @@ export default function ShippersPage() {
               className="bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary"
               asChild
             >
-              <Link href="tel:8005554868">Call (800) 555-HUNT</Link>
+              <Link href="tel:8172568492">Call (817) 256-8492</Link>
             </Button>
           </div>
         </div>

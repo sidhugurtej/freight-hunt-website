@@ -28,7 +28,7 @@ export function Testimonials() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-3">Testimonials</p>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl text-balance">
             Trusted by Shippers & Carriers
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">

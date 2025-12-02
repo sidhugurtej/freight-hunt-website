@@ -14,17 +14,22 @@ export function CTA() {
             here to help you succeed.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="gap-2">
-              Get a Free Quote
-              <ArrowRight className="h-4 w-4" />
+            <Button size="lg" variant="secondary" className="gap-2" asChild>
+              <a href="mailto:freighthunt001@gmail.com?subject=Freight Quote Request">
+                Get a Free Quote
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="gap-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground bg-transparent"
+              asChild
             >
-              <Phone className="h-4 w-4" />
-              Call Us Now
+              <a href="tel:+18172568492">
+                <Phone className="h-4 w-4" />
+                (817) 256-8492
+              </a>
             </Button>
           </div>
         </div>

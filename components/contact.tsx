@@ -10,7 +10,7 @@ export function Contact() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-3">Contact Us</p>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl text-balance">
             Get in Touch Instantly
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -25,19 +25,19 @@ export function Contact() {
               <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground mx-auto mb-6">
                 <Phone className="h-8 w-8" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-2">Call Us Now</h3>
+              <h3 className="text-2xl font-bold text-primary mb-2">Call Us Now</h3>
               <p className="text-muted-foreground mb-6">
                 Speak with our team immediately. Available 24/7, 365 days a year.
               </p>
               <div className="space-y-3">
                 <Button size="lg" className="w-full text-lg" asChild>
-                  <a href="tel:+18005554868">
+                  <a href="tel:+18172568492">
                     <Phone className="h-5 w-5 mr-2" />
-                    (800) 555-HUNT
+                    (817) 256-8492
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" className="w-full text-lg" asChild>
-                  <a href="tel:+18005554285">
+                  <a href="tel:+18172568492">
                     <Truck className="h-5 w-5 mr-2" />
                     Carrier Hotline
                   </a>
@@ -52,19 +52,19 @@ export function Contact() {
               <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground mx-auto mb-6">
                 <Mail className="h-8 w-8" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-2">Email Us</h3>
+              <h3 className="text-2xl font-bold text-primary mb-2">Email Us</h3>
               <p className="text-muted-foreground mb-6">
                 Send us a message and we'll respond within 30 minutes during business hours.
               </p>
               <div className="space-y-3">
                 <Button size="lg" className="w-full text-lg" asChild>
-                  <a href="mailto:quotes@freighthunt.us">
+                  <a href="mailto:freighthunt001@gmail.com?subject=Freight Quote Request">
                     <Package className="h-5 w-5 mr-2" />
                     Get a Quote
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" className="w-full text-lg" asChild>
-                  <a href="mailto:info@freighthunt.us">
+                  <a href="mailto:freighthunt001@gmail.com?subject=General Inquiry">
                     <Mail className="h-5 w-5 mr-2" />
                     General Inquiries
                   </a>
