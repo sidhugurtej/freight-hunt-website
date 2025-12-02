@@ -26,11 +26,7 @@ export function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="flex items-center gap-3">
-            <Logo className="w-11 h-11" />
-            <div className="flex flex-col">
-              <span className="text-lg font-bold tracking-tight text-foreground leading-none">FREIGHT</span>
-              <span className="text-lg font-bold tracking-tight text-primary leading-none">HUNT</span>
-            </div>
+            <Logo className="w-48 h-12" />
           </Link>
         </div>
 
@@ -74,11 +70,7 @@ export function Header() {
           <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-background px-6 py-6 border-l border-border">
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center gap-3">
-                <Logo className="w-11 h-11" />
-                <div className="flex flex-col">
-                  <span className="text-lg font-bold tracking-tight text-foreground leading-none">FREIGHT</span>
-                  <span className="text-lg font-bold tracking-tight text-primary leading-none">HUNT</span>
-                </div>
+                <Logo className="w-48 h-12" />
               </Link>
               <button
                 type="button"

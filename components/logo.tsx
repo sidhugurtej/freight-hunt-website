@@ -1,63 +1,39 @@
-export function Logo({ className = "w-10 h-10" }: { className?: string }) {
+export function Logo({ className = "w-48 h-12" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-      {/* Background shape */}
-      <rect width="48" height="48" rx="10" className="fill-primary" />
+    <svg viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+      {/* Outer Border */}
+      <rect x="2" y="2" width="296" height="76" stroke="#1e3a8a" strokeWidth="4" fill="white" />
 
-      {/* Crosshair/Target ring - represents "Hunt" */}
-      <circle cx="24" cy="24" r="14" stroke="currentColor" strokeWidth="2" className="stroke-primary-foreground/30" />
-      <circle cx="24" cy="24" r="8" stroke="currentColor" strokeWidth="1.5" className="stroke-primary-foreground/20" />
+      {/* Left Half Background - Extended for FREIGHT */}
+      <rect x="4" y="4" width="176" height="72" fill="#1e3a8a" />
 
-      {/* Crosshair lines */}
-      <path
-        d="M24 8V14"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        className="stroke-primary-foreground/40"
-      />
-      <path
-        d="M24 34V40"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        className="stroke-primary-foreground/40"
-      />
-      <path
-        d="M8 24H14"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        className="stroke-primary-foreground/40"
-      />
-      <path
-        d="M34 24H40"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        className="stroke-primary-foreground/40"
-      />
+      {/* Text: FREIGHT (White on Navy) */}
+      <text
+        x="92"
+        y="52"
+        fill="white"
+        textAnchor="middle"
+        fontFamily="Arial, sans-serif"
+        fontWeight="bold"
+        fontSize="32"
+        letterSpacing="1"
+      >
+        FREIGHT
+      </text>
 
-      {/* Truck icon - centered */}
-      <g className="fill-primary-foreground">
-        {/* Truck body */}
-        <rect x="13" y="20" width="14" height="10" rx="1.5" />
-        {/* Truck cab */}
-        <path d="M27 23H31C32.1046 23 33 23.8954 33 25V28.5C33 29.3284 32.3284 30 31.5 30H27V23Z" />
-        {/* Cab window */}
-        <rect x="28" y="24.5" width="3.5" height="3" rx="0.5" className="fill-primary" />
-        {/* Wheels */}
-        <circle cx="17" cy="30" r="2.5" className="fill-primary" />
-        <circle cx="17" cy="30" r="1.5" />
-        <circle cx="30" cy="30" r="2.5" className="fill-primary" />
-        <circle cx="30" cy="30" r="1.5" />
-        {/* Cargo lines */}
-        <rect x="15" y="22" width="6" height="1" rx="0.5" className="fill-primary/50" />
-        <rect x="15" y="24.5" width="8" height="1" rx="0.5" className="fill-primary/50" />
-      </g>
-
-      {/* Target dot center */}
-      <circle cx="24" cy="24" r="2" className="fill-accent" />
+      {/* Text: HUNT (Navy on White) */}
+      <text
+        x="238"
+        y="52"
+        fill="#1e3a8a"
+        textAnchor="middle"
+        fontFamily="Arial, sans-serif"
+        fontWeight="bold"
+        fontSize="32"
+        letterSpacing="1"
+      >
+        HUNT
+      </text>
     </svg>
   )
 }

@@ -3,48 +3,68 @@ import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/aerial-view-of-highway-with-semi-trucks-and-freigh.jpg"
-          alt="Freight logistics network"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
-      </div>
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
+      <div className="mx-auto max-w-7xl w-full px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
+          {/* Left Content */}
+          <div className="space-y-8">
+            <div>
+              <span className="inline-flex items-center rounded-full border border-border bg-secondary px-4 py-1.5 text-sm font-medium text-secondary-foreground">
+                Trusted by 500+ Carriers Nationwide
+              </span>
+            </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-32 pb-24 lg:px-8 lg:pt-40">
-        <div className="max-w-3xl">
-          <div className="mb-6">
-            <span className="inline-flex items-center rounded-full border border-border bg-secondary/50 px-4 py-1.5 text-sm font-medium text-secondary-foreground backdrop-blur-sm">
-              Trusted by 500+ Carriers Nationwide
-            </span>
+            <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
+              <span className="text-[#1e3a8a]">Connecting Shippers</span>
+              <br />
+              <span className="text-[#dc2626]">& Carriers Nationwide</span>
+            </h1>
+
+            <p className="text-xl leading-relaxed text-muted-foreground max-w-xl">
+              Your trusted freight brokerage partner. We connect reliable carriers with shippers for seamless,
+              efficient transportation solutions across America.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="gap-2 text-lg px-8" asChild>
+                <a href="/contact">
+                  Get a Free Quote
+                  <ArrowRight className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" className="text-lg px-8" asChild>
+                <a href="/about">
+                  Learn More
+                </a>
+              </Button>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
+              <div>
+                <div className="text-3xl font-bold text-primary">500+</div>
+                <div className="text-sm text-muted-foreground">Carriers</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary">10k+</div>
+                <div className="text-sm text-muted-foreground">Loads Moved</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary">98%</div>
+                <div className="text-sm text-muted-foreground">On-Time Rate</div>
+              </div>
+            </div>
           </div>
 
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl text-balance">
-            Connecting
-            <span className="block text-primary">Shippers & Carriers</span>
-          </h1>
-
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground max-w-2xl">
-            FreightHunt is your trusted freight brokerage partner. We simplify load selection and connect reliable
-            carriers with shippers for seamless, efficient transportation solutions.
-          </p>
-
-          <div className="mt-10">
-            <Button size="lg" className="gap-2">
-              Get a Free Quote
-              <ArrowRight className="h-4 w-4" />
-            </Button>
+          {/* Right Image */}
+          <div className="relative h-[600px] lg:h-[700px] rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src="/freight-trucks-on-highway-logistics.jpg"
+              alt="Modern freight logistics"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
           </div>
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
-          <div className="w-1 h-2 rounded-full bg-muted-foreground/50 animate-bounce" />
         </div>
       </div>
     </section>

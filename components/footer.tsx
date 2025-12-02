@@ -38,13 +38,7 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-6">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3" onClick={handleLinkClick}>
-              <div className="bg-primary rounded-lg p-1">
-                <Logo className="w-9 h-9 text-primary-foreground" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-bold tracking-tight text-background leading-none">FREIGHT</span>
-                <span className="text-lg font-bold tracking-tight text-primary leading-none">HUNT</span>
-              </div>
+              <Logo className="w-48 h-12" />
             </Link>
             <p className="mt-4 text-background/70 max-w-sm leading-relaxed">
               Your trusted partner in freight brokerage. Connecting shippers with reliable carriers for seamless

@@ -6,21 +6,18 @@ const testimonials = [
     content:
       "FreightHunt has transformed how we manage our supply chain. Their carrier network and responsive team make shipping effortless.",
     role: "Logistics Director",
-    company: "Midwest Manufacturing Co.",
     rating: 5,
   },
   {
     content:
       "As an owner-operator, finding quality loads is crucial. FreightHunt delivers consistently with fair rates and quick payment.",
     role: "Owner-Operator",
-    company: "Johnson Trucking LLC",
     rating: 5,
   },
   {
     content:
       "The transparency and communication from FreightHunt is unmatched. We always know where our freight is and when it will arrive.",
     role: "Supply Chain Manager",
-    company: "Pacific Distributors",
     rating: 5,
   },
 ]
@@ -51,7 +48,6 @@ export function Testimonials() {
                 <p className="text-card-foreground leading-relaxed mb-6">"{testimonial.content}"</p>
                 <div className="border-t border-border pt-4">
                   <p className="font-semibold text-card-foreground">{testimonial.role}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.company}</p>
                 </div>
               </CardContent>
             </Card>
