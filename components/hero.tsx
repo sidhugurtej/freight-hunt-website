@@ -51,7 +51,7 @@ export function Hero() {
           {/* Right Image */}
           <div className="relative h-[600px] lg:h-[700px] rounded-2xl overflow-hidden shadow-2xl">
             <img
-              src="/hero-connection-nationwide.png"
+              src="/hero-connection-nationwide.jpg"
               alt="Modern freight logistics"
               className="w-full h-full object-cover"
             />
