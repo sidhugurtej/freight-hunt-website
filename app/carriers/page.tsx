@@ -90,7 +90,7 @@ export default function CarriersPage() {
               </div>
             </div>
             <div className="relative">
-              <img src="/semi-truck-driver-professional.jpg" alt="Professional truck driver" className="rounded-2xl shadow-lg" />
+              <img src="/carrier-partnership-branded.png" alt="Professional truck driver partnership" className="rounded-2xl shadow-lg" />
             </div>
           </div>
         </div>
