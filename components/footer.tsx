@@ -134,7 +134,6 @@ export function Footer() {
             <p className="text-sm text-background/60">
               © {new Date().getFullYear()} Freight Hunt. All rights reserved.
             </p>
-            <p className="text-sm text-background/60">Licensed Freight Broker | MC# XXXXXX | USDOT# XXXXXXX</p>
           </div>
         </div>
       </div>

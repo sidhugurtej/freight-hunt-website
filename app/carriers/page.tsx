@@ -41,8 +41,8 @@ const benefits = [
 
 const requirements = [
   "Active MC/DOT Authority",
-  "Minimum $100,000 cargo insurance",
-  "Minimum $1,000,000 auto liability insurance",
+  "Cargo insurance",
+  "Auto liability insurance",
   "Satisfactory safety rating",
   "Valid operating authority for at least 6 months",
   "Clean CSA scores",
