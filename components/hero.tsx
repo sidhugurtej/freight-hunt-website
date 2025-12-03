@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
       <div className="mx-auto max-w-7xl w-full px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen py-20 pt-32 lg:pt-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen py-20 pt-32 lg:pt-32">
           {/* Left Content */}
           <div className="space-y-8">
             <div>
@@ -51,7 +51,7 @@ export function Hero() {
           {/* Right Image */}
           <div className="relative h-[600px] lg:h-[700px] rounded-2xl overflow-hidden shadow-2xl">
             <img
-              src="/freight-trucks-on-highway-logistics.jpg"
+              src="/hero-connection-nationwide.png"
               alt="Modern freight logistics"
               className="w-full h-full object-cover"
             />
