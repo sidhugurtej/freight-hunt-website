@@ -175,26 +175,26 @@ export default function ServicesPage() {
                     </Button>
                   </div>
                   <div
-                    className={`bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center min-h-[300px] lg:min-h-full ${index % 2 === 1 ? "lg:order-1" : ""}`}
+                    className={`flex items-center justify-center min-h-[300px] lg:min-h-full p-6 ${index % 2 === 1 ? "lg:order-1" : ""}`}
                   >
                     <img
                       src={
                         service.id === "ftl"
-                          ? "/freight-trucks-on-highway-logistics.jpg"
+                          ? "/full-truckload-semi-truck-on-highway-professional.jpg"
                           : service.id === "ltl"
                             ? "/retail-warehouse-boxes.jpg"
                             : service.id === "expedited"
                               ? "/aerial-view-of-highway-with-semi-trucks-and-freigh.jpg"
                               : service.id === "specialized"
-                                ? "/construction-heavy-equipment.jpg"
+                                ? "/oversized-heavy-haul-freight-truck-carrying-large.jpg"
                                 : service.id === "temperature"
-                                  ? "/food-beverage-cold-storage.jpg"
+                                  ? "/refrigerated-reefer-truck-cold-chain-logistics-tem.jpg"
                                   : service.id === "crossborder"
                                     ? "/shipping-warehouse-logistics-operations.jpg"
                                     : "/placeholder.jpg"
                       }
                       alt={service.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover rounded-2xl shadow-md"
                     />
                   </div>
                 </div>
