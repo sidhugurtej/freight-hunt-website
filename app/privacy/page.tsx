@@ -17,7 +17,7 @@ export default function PrivacyPage() {
       <PageHeader title="Privacy Policy" description="Last updated: December 1, 2025" />
 
       <section className="py-10">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-primary mb-4">1. Information We Collect</h2>
           <p className="text-muted-foreground mb-6 leading-relaxed">
             Freight Hunt collects information you provide directly to us, such as when you request a quote, create an
