@@ -16,8 +16,8 @@ export default function TermsPage() {
 
       <PageHeader title="Terms of Service" description="Last updated: December 1, 2025" />
 
-      <section className="py-20">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8 prose prose-slate max-w-none">
+      <section className="py-10">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-primary mb-4">1. Acceptance of Terms</h2>
           <p className="text-muted-foreground mb-6 leading-relaxed">
             By accessing or using the Freight Hunt website and services, you agree to be bound by these Terms of
