@@ -83,7 +83,7 @@ export default function AboutPage() {
                   transparency, and poor communication.
                 </p>
                 <p>
-                  Founded in 2018, we set out to change that. Starting as a small operation with just a handful of
+                  Founded in 2009, we set out to change that. Starting as a small operation with just a handful of
                   trusted carriers, we focused on building relationships based on trust, reliability, and exceptional
                   service.
                 </p>
@@ -97,7 +97,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
                 <img
-                  src="/our_story_logistics.png"
+                  src="/our_story_logistics.jpg"
                   alt="Freight Hunt logistics operations"
                   className="rounded-2xl object-cover w-full h-full shadow-xl"
                 />
