@@ -49,11 +49,7 @@ const contactInfo = [
 ]
 
 const emailContacts = [
-  { icon: Package, email: "freighthunt001@gmail.com", label: "Get a Quote", subject: "Freight Quote Request" },
-  { icon: Truck, email: "freighthunt001@gmail.com", label: "Carrier Onboarding", subject: "Carrier Onboarding Application" },
-  { icon: Users, email: "freighthunt001@gmail.com", label: "Sales Inquiries", subject: "Sales Inquiry" },
-  { icon: Briefcase, email: "freighthunt001@gmail.com", label: "Career Opportunities", subject: "Career Opportunity" },
-  { icon: Mail, email: "freighthunt001@gmail.com", label: "General Inquiries", subject: "General Inquiry" },
+  { icon: Mail, email: "info@freighthunt.us", label: "General Inquiries", subject: "General Inquiry" },
 ]
 
 export default function ContactPage() {
@@ -95,12 +91,6 @@ export default function ContactPage() {
                       (817) 256-8492
                     </a>
                   </Button>
-                  <Button size="lg" variant="outline" className="w-full text-lg" asChild>
-                    <a href="tel:+18172568492">
-                      <Truck className="h-5 w-5 mr-2" />
-                      Carrier Hotline
-                    </a>
-                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -117,15 +107,9 @@ export default function ContactPage() {
                 </p>
                 <div className="space-y-3">
                   <Button size="lg" className="w-full text-lg" asChild>
-                    <a href="mailto:freighthunt001@gmail.com?subject=Freight Quote Request">
+                    <a href="mailto:info@freighthunt.us?subject=Freight Quote Request">
                       <Package className="h-5 w-5 mr-2" />
                       Get a Quote
-                    </a>
-                  </Button>
-                  <Button size="lg" variant="outline" className="w-full text-lg" asChild>
-                    <a href="mailto:freighthunt001@gmail.com?subject=General Inquiry">
-                      <Mail className="h-5 w-5 mr-2" />
-                      General Inquiries
                     </a>
                   </Button>
                 </div>
@@ -265,13 +249,6 @@ export default function ContactPage() {
               >
                 <Phone className="h-5 w-5" />
                 (817) 256-8492
-              </a>
-              <a
-                href="tel:+18172568492"
-                className="inline-flex items-center justify-center gap-2 bg-primary-foreground/10 text-primary-foreground font-semibold px-6 py-3 rounded-lg border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-colors"
-              >
-                <Truck className="h-5 w-5" />
-                Carrier Hotline
               </a>
             </div>
           </div>

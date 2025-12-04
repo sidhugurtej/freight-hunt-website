@@ -15,7 +15,7 @@ export function CTA() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="gap-2" asChild>
-              <a href="mailto:freighthunt001@gmail.com?subject=Freight Quote Request">
+              <a href="mailto:info@freighthunt.us?subject=Freight Quote Request">
                 Get a Free Quote
                 <ArrowRight className="h-4 w-4" />
               </a>

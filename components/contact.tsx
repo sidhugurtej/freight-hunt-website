@@ -36,12 +36,6 @@ export function Contact() {
                     (817) 256-8492
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="w-full text-lg" asChild>
-                  <a href="tel:+18172568492">
-                    <Truck className="h-5 w-5 mr-2" />
-                    Carrier Hotline
-                  </a>
-                </Button>
               </div>
             </CardContent>
           </Card>
@@ -58,15 +52,9 @@ export function Contact() {
               </p>
               <div className="space-y-3">
                 <Button size="lg" className="w-full text-lg" asChild>
-                  <a href="mailto:freighthunt001@gmail.com?subject=Freight Quote Request">
+                  <a href="mailto:info@freighthunt.us?subject=Freight Quote Request">
                     <Package className="h-5 w-5 mr-2" />
                     Get a Quote
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" className="w-full text-lg" asChild>
-                  <a href="mailto:freighthunt001@gmail.com?subject=General Inquiry">
-                    <Mail className="h-5 w-5 mr-2" />
-                    General Inquiries
                   </a>
                 </Button>
               </div>

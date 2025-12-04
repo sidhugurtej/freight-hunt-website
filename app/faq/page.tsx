@@ -22,7 +22,7 @@ const faqCategories = [
       {
         question: "How do I get a freight quote?",
         answer:
-          "Getting a quote is easy! Simply contact us via phone at (817) 256-8492, email us at freighthunt001@gmail.com, or fill out our online contact form. Provide your origin, destination, commodity type, weight, and desired pickup date, and we'll provide competitive rates.",
+          "Getting a quote is easy! Simply contact us via phone at (817) 256-8492, email us at info@freighthunt.us, or fill out our online contact form. Provide your origin, destination, commodity type, weight, and desired pickup date, and we'll provide competitive rates.",
       },
       {
         question: "What types of freight do you handle?",
