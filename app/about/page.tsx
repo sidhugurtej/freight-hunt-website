@@ -97,9 +97,9 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
                 <img
-                  src="/freight-trucks-on-highway-logistics.jpg"
+                  src="/our_story_logistics.png"
                   alt="Freight Hunt logistics operations"
-                  className="rounded-2xl object-cover w-full h-full"
+                  className="rounded-2xl object-cover w-full h-full shadow-xl"
                 />
               </div>
             </div>
