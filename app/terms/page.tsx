@@ -2,6 +2,13 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { PageHeader } from "@/components/page-header"
 
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Terms of Service",
+  description: "Review our Terms of Service for using the Freight Hunt website and services.",
+}
+
 export default function TermsPage() {
   return (
     <main className="min-h-screen">

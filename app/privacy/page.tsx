@@ -2,6 +2,13 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { PageHeader } from "@/components/page-header"
 
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Read our Privacy Policy to understand how we collect, use, and protect your information.",
+}
+
 export default function PrivacyPage() {
   return (
     <main className="min-h-screen">

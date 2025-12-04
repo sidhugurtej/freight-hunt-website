@@ -57,6 +57,13 @@ const equipmentTypes = [
   { name: "Power Only", loads: "Available" },
 ]
 
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "For Carriers",
+  description: "Join our network of trusted carriers. Access quality loads, competitive pay, and 24/7 support.",
+}
+
 export default function CarriersPage() {
   return (
     <main className="min-h-screen">

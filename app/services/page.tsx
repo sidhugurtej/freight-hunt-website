@@ -133,6 +133,13 @@ const whyChoose = [
   },
 ]
 
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Services",
+  description: "Explore our comprehensive freight solutions including FTL, LTL, expedited, specialized, and cross-border shipping.",
+}
+
 export default function ServicesPage() {
   return (
     <main className="min-h-screen">

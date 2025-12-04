@@ -59,6 +59,13 @@ const team = [
   },
 ]
 
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "Learn about Freight Hunt, our mission, values, and the team dedicated to simplifying freight transportation.",
+}
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen">

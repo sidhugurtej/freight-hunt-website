@@ -7,7 +7,10 @@ const _inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Freight Hunt | Connecting Shippers and Carriers",
+  title: {
+    default: "Freight Hunt | Connecting Shippers and Carriers",
+    template: "%s | Freight Hunt",
+  },
   description:
     "FreightHunt is your trusted freight brokerage partner. We connect shippers with reliable carriers for seamless load selection and transportation solutions.",
   keywords: "freight brokerage, load selection, shippers, carriers, freight transportation, logistics",

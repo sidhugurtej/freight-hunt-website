@@ -83,6 +83,13 @@ const faqCategories = [
   },
 ]
 
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "FAQ",
+  description: "Frequently asked questions about Freight Hunt services for shippers and carriers.",
+}
+
 export default function FAQPage() {
   return (
     <main className="min-h-screen">

@@ -75,6 +75,13 @@ const industries = [
   "Consumer Goods",
 ]
 
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "For Shippers",
+  description: "Reliable freight solutions for your business. Connect with vetted carriers and get competitive rates.",
+}
+
 export default function ShippersPage() {
   return (
     <main className="min-h-screen">
