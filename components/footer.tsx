@@ -61,15 +61,6 @@ export function Footer() {
                   <Mail className="h-4 w-4 group-hover:text-primary transition-colors" />
                   <span className="text-sm">info@freighthunt.us</span>
                 </a>
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=11701+Sky+Blue+Ct,+Haslet,+TX+76052"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors group"
-                >
-                  <MapPin className="h-4 w-4 mt-0.5 group-hover:text-primary transition-colors" />
-                  <span className="text-sm">11701 Sky Blue Ct, Haslet, TX 76052</span>
-                </a>
               </div>
             </div>
           </div>
