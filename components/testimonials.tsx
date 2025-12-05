@@ -47,7 +47,7 @@ export function Testimonials() {
                 </div>
                 <p className="text-card-foreground leading-relaxed mb-6">"{testimonial.content}"</p>
                 <div className="border-t border-border pt-4">
-                  <p className="font-semibold text-card-foreground">{testimonial.role}</p>
+                  <p className="text-card-foreground">{testimonial.role}</p>
                 </div>
               </CardContent>
             </Card>

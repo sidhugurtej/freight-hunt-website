@@ -7,7 +7,6 @@ import { ForShippers } from "@/components/for-shippers"
 import { ForCarriers } from "@/components/for-carriers"
 import { Testimonials } from "@/components/testimonials"
 import { CTA } from "@/components/cta"
-import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -22,7 +21,6 @@ export default function Home() {
       <ForCarriers />
       <Testimonials />
       <CTA />
-      <Contact />
       <Footer />
     </main>
   )

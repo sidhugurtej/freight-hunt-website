@@ -3,6 +3,14 @@ import { Footer } from "@/components/footer"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
 import Link from "next/link"
 import { CheckCircle, DollarSign, Truck, Fuel, CreditCard, MapPin, PhoneCall, Shield, TrendingUp } from "lucide-react"
 
@@ -138,20 +146,34 @@ export default function CarriersPage() {
               want to hear from you.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {equipmentTypes.map((equipment) => (
-              <Card key={equipment.name} className="border-0 shadow-md">
-                <CardContent className="p-6 flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10">
-                      <Truck className="h-6 w-6 text-primary" />
-                    </div>
-                    <span className="font-semibold text-primary">{equipment.name}</span>
-                  </div>
-                  <span className="text-sm text-primary font-medium">{equipment.loads}</span>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="max-w-3xl mx-auto">
+            <Card className="border-0 shadow-md overflow-hidden">
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-muted/50 hover:bg-muted/50">
+                    <TableHead className="w-[50%] pl-6">Equipment Type</TableHead>
+                    <TableHead className="pl-6">Volume Availability</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {equipmentTypes.map((equipment) => (
+                    <TableRow key={equipment.name} className="hover:bg-muted/5">
+                      <TableCell className="font-medium pl-6">
+                        <div className="flex items-center gap-3">
+                          <Truck className="h-4 w-4 text-primary" />
+                          {equipment.name}
+                        </div>
+                      </TableCell>
+                      <TableCell className="pl-6">
+                        <span className="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
+                          {equipment.loads}
+                        </span>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </Card>
           </div>
         </div>
       </section>
