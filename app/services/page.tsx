@@ -17,15 +17,25 @@ import {
   Shield,
   DollarSign,
   Headphones,
+  Star,
+  Quote,
 } from "lucide-react"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Services",
+  description: "Explore our comprehensive freight solutions including FTL, LTL, expedited, specialized, and cross-border shipping.",
+}
 
 const services = [
   {
     id: "ftl",
     icon: Truck,
     title: "Full Truckload (FTL)",
+    tag: "Best for: High Volume",
     description:
       "Dedicated truck capacity for your shipments. Ideal for large volume freight that fills an entire trailer.",
+    useCases: "Common use cases: Manufacturing distribution, large retail replenishment, bulk commodity transport.",
     features: [
       "Dedicated capacity with no freight mixing",
       "Faster transit times with direct routes",
@@ -39,8 +49,10 @@ const services = [
     id: "ltl",
     icon: Package,
     title: "Less Than Truckload (LTL)",
+    tag: "Best for: Small Shipments",
     description:
       "Cost-effective shipping for smaller freight that doesn't require a full truck. Share space and save money.",
+    useCases: "Common use cases: E-commerce fulfillment, sample distribution, small pallet shipments.",
     features: [
       "Pay only for the space you use",
       "Consolidated shipping for cost savings",
@@ -54,8 +66,10 @@ const services = [
     id: "expedited",
     icon: Zap,
     title: "Expedited Shipping",
+    tag: "Best for: Time Critical",
     description:
       "Time-critical freight solutions when every minute counts. Guaranteed delivery times for urgent shipments.",
+    useCases: "Common use cases: Critical plant shutdown parts, last‑minute retail replenishment, urgent medical supplies.",
     features: [
       "Same-day and next-day delivery options",
       "Dedicated trucks with team drivers",
@@ -69,7 +83,9 @@ const services = [
     id: "specialized",
     icon: AlertTriangle,
     title: "Specialized Freight",
+    tag: "Best for: Oversized/Complex",
     description: "Heavy haul, oversized, and unique freight solutions requiring special permits and equipment.",
+    useCases: "Common use cases: Heavy machinery transport, infrastructure components, energy sector equipment.",
     features: [
       "Oversized and overweight loads",
       "Heavy machinery and equipment",
@@ -83,8 +99,10 @@ const services = [
     id: "temperature",
     icon: Snowflake,
     title: "Temperature Controlled",
+    tag: "Best for: Perishables",
     description:
       "Refrigerated and climate-controlled shipping for perishables, pharmaceuticals, and temperature-sensitive goods.",
+    useCases: "Common use cases: Produce distribution, frozen food transport, pharmaceutical cold chain.",
     features: [
       "Reefer trailers with precise controls",
       "Temperature monitoring throughout transit",
@@ -98,7 +116,9 @@ const services = [
     id: "crossborder",
     icon: Globe,
     title: "Cross-Border Shipping",
+    tag: "Best for: International",
     description: "Seamless freight transportation across the US, Canada, and Mexico borders with full customs support.",
+    useCases: "Common use cases: Automotive supply chain, raw material imports, finished goods export.",
     features: [
       "US-Canada-Mexico corridors",
       "Customs documentation assistance",
@@ -114,31 +134,24 @@ const whyChoose = [
   {
     icon: Shield,
     title: "Vetted Carrier Network",
-    description: "Every carrier in our network is thoroughly screened for safety, insurance, and reliability.",
+    description: "Carriers screened for safety, insurance, and on‑time performance scores, ensuring your freight is in good hands.",
   },
   {
     icon: DollarSign,
     title: "Competitive Rates",
-    description: "Our buying power and carrier relationships ensure you get the best rates available.",
+    description: "Our buying power and carrier relationships ensure you get the best rates available without compromising quality.",
   },
   {
     icon: Clock,
     title: "24/7 Support",
-    description: "Our team is always available to handle your freight needs and answer questions.",
+    description: "Live agents monitoring shipments nights and weekends, so you never have to wonder where your freight is.",
   },
   {
     icon: Headphones,
     title: "Dedicated Agents",
-    description: "Work with the same team who understands your business and shipping patterns.",
+    description: "Work with the same team who understands your business, shipping patterns, and communication preferences.",
   },
 ]
-
-import type { Metadata } from "next"
-
-export const metadata: Metadata = {
-  title: "Services",
-  description: "Explore our comprehensive freight solutions including FTL, LTL, expedited, specialized, and cross-border shipping.",
-}
 
 export default function ServicesPage() {
   return (
@@ -148,24 +161,39 @@ export default function ServicesPage() {
       <PageHeader
         badge="Our Services"
         title="Comprehensive Freight Solutions"
-        description="From full truckloads to specialized freight, we provide end-to-end logistics services tailored to your business needs."
-      />
+        description="From full truckloads to specialized freight, we provide end-to-end logistics services, including freight brokerage and nationwide shipping, tailored to your business needs."
+      >
+        <Button size="lg" asChild>
+          <Link href="/contact">Request a Freight Quote</Link>
+        </Button>
+      </PageHeader>
 
       {/* Services Grid */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-8">
             {services.map((service, index) => (
-              <Card key={service.id} id={service.id} className="border-0 shadow-lg overflow-hidden">
+              <Card key={service.id} id={service.id} className="border-0 shadow-lg overflow-hidden scroll-mt-24">
                 <div className={`grid lg:grid-cols-2 ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                   <div className={`p-8 lg:p-12 ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10">
-                        <service.icon className="h-7 w-7 text-primary" />
+                    <div className="flex flex-col gap-2 mb-6">
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10">
+                          <service.icon className="h-7 w-7 text-primary" />
+                        </div>
+                        <h2 className="text-2xl font-bold text-primary">{service.title}</h2>
                       </div>
-                      <h2 className="text-2xl font-bold text-primary">{service.title}</h2>
+                      <div className="flex items-center gap-2 text-sm font-medium text-primary bg-primary/5 w-fit px-3 py-1 rounded-full">
+                        <CheckCircle className="h-3.5 w-3.5" />
+                        {service.tag}
+                      </div>
                     </div>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
+
+                    <p className="text-muted-foreground mb-4 leading-relaxed">{service.description}</p>
+                    <p className="text-sm font-medium text-foreground mb-6 bg-muted/50 p-3 rounded-lg border-l-4 border-primary">
+                      {service.useCases}
+                    </p>
+
                     <ul className="space-y-3 mb-6">
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3">
@@ -176,8 +204,8 @@ export default function ServicesPage() {
                     </ul>
                     <p className="text-sm text-muted-foreground italic mb-6">{service.benefits}</p>
                     <Button asChild>
-                      <Link href="/contact">
-                        Request Quote <ArrowRight className="ml-2 h-4 w-4" />
+                      <Link href={`/contact?service=${service.id}`}>
+                        Request a Freight Quote <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
                   </div>
@@ -220,7 +248,8 @@ export default function ServicesPage() {
               We go beyond just moving freight. We become an extension of your team.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {whyChoose.map((item) => (
               <Card key={item.title} className="border-0 shadow-md text-center">
                 <CardContent className="p-6">
@@ -242,7 +271,10 @@ export default function ServicesPage() {
           <h2 className="text-3xl font-bold tracking-tight text-primary-foreground mb-4">
             Need a Custom Freight Solution?
           </h2>
-          <p className="text-lg text-primary-foreground/80 mb-8">
+          <p className="text-lg text-primary-foreground/90 font-medium mb-2">
+            Average response time: under 1 business hour
+          </p>
+          <p className="text-primary-foreground/80 mb-8">
             Our logistics experts can design a transportation solution tailored to your unique requirements.
           </p>
           <Button size="lg" variant="secondary" asChild>

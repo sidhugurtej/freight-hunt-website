@@ -2,9 +2,10 @@ interface PageHeaderProps {
   title: string
   description: string
   badge?: string
+  children?: React.ReactNode
 }
 
-export function PageHeader({ title, description, badge }: PageHeaderProps) {
+export function PageHeader({ title, description, badge, children }: PageHeaderProps) {
   return (
     <section className="pt-32 pb-16 bg-gradient-to-b from-primary/5 to-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -16,6 +17,7 @@ export function PageHeader({ title, description, badge }: PageHeaderProps) {
           )}
           <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl text-balance">{title}</h1>
           <p className="mt-6 text-lg leading-8 text-muted-foreground text-pretty">{description}</p>
+          {children && <div className="mt-8 flex justify-center">{children}</div>}
         </div>
       </div>
     </section>
