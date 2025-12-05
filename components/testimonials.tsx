@@ -4,19 +4,19 @@ import { Star } from "lucide-react"
 const testimonials = [
   {
     content:
-      "FreightHunt has transformed how we manage our supply chain. Their carrier network and responsive team make shipping effortless.",
+      "Freight Hunt has transformed how we manage our supply chain. Their carrier network and responsive team make shipping effortless.",
     role: "Logistics Director",
     rating: 5,
   },
   {
     content:
-      "As an owner-operator, finding quality loads is crucial. FreightHunt delivers consistently with fair rates and quick payment.",
+      "As an owner-operator, finding quality loads is crucial. Freight Hunt delivers consistently with fair rates and quick payment.",
     role: "Owner-Operator",
     rating: 5,
   },
   {
     content:
-      "The transparency and communication from FreightHunt is unmatched. We always know where our freight is and when it will arrive.",
+      "The transparency and communication from Freight Hunt is unmatched. We always know where our freight is and when it will arrive.",
     role: "Supply Chain Manager",
     rating: 5,
   },
@@ -32,7 +32,7 @@ export function Testimonials() {
             Trusted by Shippers & Carriers
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            See what our partners have to say about working with FreightHunt.
+            See what our partners have to say about working with Freight Hunt.
           </p>
         </div>
 

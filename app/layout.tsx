@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     template: "%s | Freight Hunt",
   },
   description:
-    "FreightHunt is your trusted freight brokerage partner. We connect shippers with reliable carriers for seamless load selection and transportation solutions.",
-  keywords: "freight brokerage, load selection, shippers, carriers, freight transportation, logistics",
+    "Freight Hunt is a premier nationwide freight broker offering FTL and LTL shipping solutions. We connect shippers with reliable carriers for seamless freight transportation.",
+  keywords: "freight brokerage, FTL shipping, LTL shipping, nationwide freight broker, freight transportation, logistics, shippers, carriers",
   icons: {
     icon: "/icon.svg",
   },

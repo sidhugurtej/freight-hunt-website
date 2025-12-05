@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 const benefits = [
-  "Access to 500+ vetted carriers nationwide",
-  "Competitive rates with transparent pricing",
-  "Real-time visibility and tracking",
-  "Dedicated account management",
-  "Flexible scheduling options",
-  "Claims support and insurance",
+  "Instant access to a nationwide network of 500+ vetted carriers for faster coverage",
+  "Transparent, competitive pricing with no hidden fees to protect your margins",
+  "Real-time visibility and tracking so you always know where your freight is",
+  "Dedicated account management for personalized service and support",
+  "Flexible scheduling options to meet your specific delivery timelines",
+  "Comprehensive claims support and insurance for complete peace of mind",
 ]
 
 export function ForShippers() {
@@ -35,7 +36,7 @@ export function ForShippers() {
               Move Your Freight with Confidence
             </h2>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-              Whether you're shipping one load or managing a complex supply chain, FreightHunt provides the tools and
+              Whether you're shipping one load or managing a complex supply chain, Freight Hunt provides the tools and
               network you need to move freight efficiently.
             </p>
 
@@ -49,9 +50,11 @@ export function ForShippers() {
             </ul>
 
             <div className="mt-10">
-              <Button size="lg" className="gap-2">
-                Ship with Us
-                <ArrowRight className="h-4 w-4" />
+              <Button size="lg" className="gap-2" asChild>
+                <Link href="/contact">
+                  Get Shipper Quote
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </Button>
             </div>
           </div>

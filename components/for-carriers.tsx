@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 const benefits = [
-  "Access to quality loads daily",
-  "Quick pay options available",
-  "No hidden fees or charges",
-  "Dedicated carrier support team",
-  "Easy-to-use load board",
-  "Build long-term relationships",
+  "Access consistent, high-quality loads daily to keep your trucks moving",
+  "Quick pay options available to improve your cash flow",
+  "No hidden fees or charges so you keep more of what you earn",
+  "Dedicated carrier support team to assist you every mile of the way",
+  "Easy-to-use load board for finding the perfect freight for your equipment",
+  "Build long-term relationships for steady work and reliable income",
 ]
 
 export function ForCarriers() {
@@ -21,7 +22,7 @@ export function ForCarriers() {
               Keep Your Trucks Moving
             </h2>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-              Partner with FreightHunt to access consistent, quality loads that keep your trucks rolling and your
+              Partner with Freight Hunt to access consistent, quality loads that keep your trucks rolling and your
               business growing.
             </p>
 
@@ -35,9 +36,11 @@ export function ForCarriers() {
             </ul>
 
             <div className="mt-10">
-              <Button size="lg" className="gap-2">
-                Join Our Network
-                <ArrowRight className="h-4 w-4" />
+              <Button size="lg" className="gap-2" asChild>
+                <Link href="/contact">
+                  Apply as a Carrier
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </Button>
             </div>
           </div>

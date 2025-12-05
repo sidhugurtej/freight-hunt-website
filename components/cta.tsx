@@ -10,13 +10,13 @@ export function CTA() {
             Ready to Simplify Your Freight?
           </h2>
           <p className="mt-4 text-lg text-primary-foreground/80 leading-relaxed">
-            Whether you're a shipper looking for reliable capacity or a carrier seeking quality loads, FreightHunt is
+            Whether you're a shipper looking for reliable capacity or a carrier seeking quality loads, Freight Hunt is
             here to help you succeed.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="gap-2" asChild>
               <a href="mailto:info@freighthunt.us?subject=Freight Quote Request">
-                Get a Free Quote
+                Get a Freight Quote
                 <ArrowRight className="h-4 w-4" />
               </a>
             </Button>

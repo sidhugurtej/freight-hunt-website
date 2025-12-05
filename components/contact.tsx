@@ -54,7 +54,7 @@ export function Contact() {
                 <Button size="lg" className="w-full text-lg" asChild>
                   <a href="mailto:info@freighthunt.us?subject=Freight Quote Request">
                     <Package className="h-5 w-5 mr-2" />
-                    Get a Quote
+                    Get a Freight Quote
                   </a>
                 </Button>
               </div>

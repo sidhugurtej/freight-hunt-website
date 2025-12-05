@@ -44,18 +44,32 @@ export function Footer() {
               Your trusted partner in freight brokerage. Connecting shippers with reliable carriers for seamless
               transportation solutions across the nation.
             </p>
-            <div className="mt-6 space-y-3">
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span className="text-sm">(817) 256-8492</span>
-              </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <Mail className="h-4 w-4" />
-                <span className="text-sm">info@freighthunt.us</span>
-              </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <MapPin className="h-4 w-4" />
-                <span className="text-sm">11701 Sky Blue Ct, Haslet, TX 76052</span>
+            <div className="mt-8">
+              <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">Contact Details</h3>
+              <div className="space-y-3">
+                <a
+                  href="tel:+18172568492"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
+                >
+                  <Phone className="h-4 w-4 group-hover:text-primary transition-colors" />
+                  <span className="text-sm">(817) 256-8492</span>
+                </a>
+                <a
+                  href="mailto:info@freighthunt.us"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
+                >
+                  <Mail className="h-4 w-4 group-hover:text-primary transition-colors" />
+                  <span className="text-sm">info@freighthunt.us</span>
+                </a>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=11701+Sky+Blue+Ct,+Haslet,+TX+76052"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors group"
+                >
+                  <MapPin className="h-4 w-4 mt-0.5 group-hover:text-primary transition-colors" />
+                  <span className="text-sm">11701 Sky Blue Ct, Haslet, TX 76052</span>
+                </a>
               </div>
             </div>
           </div>
