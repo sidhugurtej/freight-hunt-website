@@ -10,22 +10,22 @@ const values = [
   {
     icon: Shield,
     title: "Integrity",
-    description: "We operate with complete transparency and honesty in every transaction and relationship.",
+    description: "We operate with complete transparency no surprise fees, just honest communication in every transaction.",
   },
   {
     icon: Users,
     title: "Partnership",
-    description: "We view our clients and carriers as partners, invested in mutual success and growth.",
+    description: "We view our clients and carriers as partners, invested in mutual success with dedicated support for every load.",
   },
   {
     icon: TrendingUp,
     title: "Excellence",
-    description: "We continuously strive to exceed expectations and deliver superior service every time.",
+    description: "We continuously strive to exceed expectations, delivering superior service and proactive problem-solving.",
   },
   {
     icon: Clock,
     title: "Reliability",
-    description: "We understand that timing is critical, and we deliver on our promises consistently.",
+    description: "We understand that timing is critical; we deliver on our promises with consistent, on-time performance.",
   },
 ]
 
@@ -86,8 +86,8 @@ export default function AboutPage() {
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Freight Hunt was born from a simple observation: the freight industry needed a better way to connect
-                  shippers with carriers. Too often, businesses struggled with unreliable shipping, lack of
-                  transparency, and poor communication.
+                  shippers with carriers. Too often, businesses from manufacturing to retail and construction struggled
+                  with unreliable shipping, lack of transparency, and poor communication.
                 </p>
                 <p>
                   Founded in 2009, we set out to change that. Starting as a small operation with just a handful of
@@ -155,12 +155,14 @@ export default function AboutPage() {
       {/* Stats */}
       <section className="py-16 bg-primary">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary-foreground">{stat.value}</div>
-                <div className="mt-2 text-primary-foreground/80 text-sm">{stat.label}</div>
-              </div>
+              <Card key={stat.label} className="bg-primary-foreground/10 border-primary-foreground/20 text-center">
+                <CardContent className="p-6">
+                  <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">{stat.value}</div>
+                  <div className="text-primary-foreground/80 text-sm font-medium">{stat.label}</div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
@@ -244,6 +246,9 @@ export default function AboutPage() {
               <Link href="/carriers">Join as Carrier</Link>
             </Button>
           </div>
+          <p className="mt-8 text-sm text-primary-foreground/70">
+            Get a response within 15 minutes. No obligation required.
+          </p>
         </div>
       </section>
 
