@@ -340,10 +340,6 @@ export function ContactPageContent() {
                                         />
                                     </div>
 
-                                    {errors.general && (
-                                        <p className="text-sm text-red-600 text-center font-medium">{errors.general}</p>
-                                    )}
-
                                     <Button type="submit" size="lg" className="w-full text-lg shadow-md hover:shadow-lg transition-all bg-primary hover:bg-primary/90 text-primary-foreground border-none" disabled={isSubmitting}>
                                         {isSubmitting ? 'Submitting...' : 'Submit Now'}
                                     </Button>
@@ -351,8 +347,10 @@ export function ContactPageContent() {
                                     {submitStatus === 'success' && (
                                         <p className="text-center text-sm text-green-600 font-medium">Thank you! We'll respond shortly.</p>
                                     )}
-                                    {submitStatus === 'error' && (
-                                        <p className="text-center text-sm text-red-600 font-medium">Something went wrong. Please try again or call us.</p>
+                                    {(submitStatus === 'error' || errors.general) && (
+                                        <p className="text-center text-sm text-red-600 font-medium">
+                                            {errors.general || 'Something went wrong. Please try again or call us at (817) 256-8492.'}
+                                        </p>
                                     )}
 
                                     <p className="text-center text-xs text-muted-foreground mt-4">
