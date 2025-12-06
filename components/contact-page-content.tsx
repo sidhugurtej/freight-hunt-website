@@ -37,11 +37,25 @@ export function ContactPageContent() {
     })
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+    const [emailError, setEmailError] = useState<string>("")
+
+    const validateEmail = (email: string): boolean => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        return emailRegex.test(email)
+    }
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
+
+        // Validate email before submitting
+        if (!validateEmail(formData.email)) {
+            setEmailError("Please enter a valid email address")
+            return
+        }
+
         setIsSubmitting(true)
         setSubmitStatus('idle')
+        setEmailError("")
 
         try {
             const response = await fetch('/api/contact', {
@@ -75,7 +89,13 @@ export function ContactPageContent() {
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value })
+        const { name, value } = e.target
+        setFormData({ ...formData, [name]: value })
+
+        // Clear email error when user types
+        if (name === 'email' && emailError) {
+            setEmailError("")
+        }
     }
 
     const handleServiceChange = (value: string) => {
@@ -180,10 +200,13 @@ export function ContactPageContent() {
                                                 type="email"
                                                 placeholder="john@company.com"
                                                 required
-                                                className="bg-muted/30"
+                                                className={`bg-muted/30 ${emailError ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                                                 value={formData.email}
                                                 onChange={handleChange}
                                             />
+                                            {emailError && (
+                                                <p className="text-sm text-red-600 mt-1">{emailError}</p>
+                                            )}
                                         </div>
                                     </div>
 

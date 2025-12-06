@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { getEmailService } from '@/lib/email'
 
 export async function POST(request: Request) {
     try {
@@ -13,13 +14,19 @@ export async function POST(request: Request) {
             )
         }
 
-        // Here you would typically:
-        // 1. Send an email using a service like SendGrid, Resend, or Nodemailer
-        // 2. Store the submission in a database
-        // 3. Send to a CRM system
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailRegex.test(email)) {
+            return NextResponse.json(
+                { error: 'Invalid email format' },
+                { status: 400 }
+            )
+        }
 
-        // For now, we'll just log it and return success
-        console.log('Contact form submission:', {
+        // Get email service and send email
+        const emailService = getEmailService()
+
+        await emailService.sendContactForm({
             name,
             email,
             phone,
@@ -28,36 +35,15 @@ export async function POST(request: Request) {
             origin,
             destination,
             notes,
-            timestamp: new Date().toISOString()
         })
-
-        // TODO: Implement email sending
-        // Example with Resend:
-        // await resend.emails.send({
-        //   from: 'noreply@freighthunt.us',
-        //   to: 'info@freighthunt.us',
-        //   subject: 'New Freight Quote Request',
-        //   html: `
-        //     <h2>New Quote Request</h2>
-        //     <p><strong>Name:</strong> ${name}</p>
-        //     <p><strong>Email:</strong> ${email}</p>
-        //     <p><strong>Phone:</strong> ${phone}</p>
-        //     <p><strong>Cargo Type:</strong> ${cargoType}</p>
-        //     <p><strong>Service:</strong> ${service || 'Not specified'}</p>
-        //     <p><strong>Origin:</strong> ${origin}</p>
-        //     <p><strong>Destination:</strong> ${destination}</p>
-        //     <p><strong>Notes:</strong> ${notes || 'None'}</p>
-        //   `
-        // })
 
         return NextResponse.json(
             { message: 'Form submitted successfully' },
             { status: 200 }
         )
     } catch (error) {
-        console.error('Contact form error:', error)
         return NextResponse.json(
-            { error: 'Internal server error' },
+            { error: 'Failed to send email. Please try again or call us directly.' },
             { status: 500 }
         )
     }
