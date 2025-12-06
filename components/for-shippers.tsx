@@ -51,7 +51,7 @@ export function ForShippers() {
 
             <div className="mt-10">
               <Button size="lg" className="gap-2" asChild>
-                <Link href="/contact">
+                <Link href="/contact#quote-form">
                   Get Shipper Quote
                   <ArrowRight className="h-4 w-4" />
                 </Link>

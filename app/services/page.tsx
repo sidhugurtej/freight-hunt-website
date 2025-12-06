@@ -200,7 +200,7 @@ export default function ServicesPage() {
         description="From full truckloads to specialized freight, we provide end-to-end logistics services, including freight brokerage and nationwide shipping, tailored to your business needs."
       >
         <Button size="lg" asChild>
-          <Link href="/contact">Request a Freight Quote</Link>
+          <Link href="/contact#quote-form">Request a Freight Quote</Link>
         </Button>
       </PageHeader>
 
@@ -240,7 +240,7 @@ export default function ServicesPage() {
                     </ul>
                     <p className="text-sm text-muted-foreground italic mb-6">{service.benefits}</p>
                     <Button asChild>
-                      <Link href={`/contact?service=${service.id}`}>
+                      <Link href="/contact#quote-form">
                         Request a Freight Quote <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>

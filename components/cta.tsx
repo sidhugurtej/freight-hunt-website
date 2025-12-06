@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Phone } from "lucide-react"
+import Link from "next/link"
 
 export function CTA() {
   return (
@@ -15,10 +16,10 @@ export function CTA() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="gap-2" asChild>
-              <a href="mailto:info@freighthunt.us?subject=Freight Quote Request">
+              <Link href="/contact#quote-form">
                 Get a Freight Quote
                 <ArrowRight className="h-4 w-4" />
-              </a>
+              </Link>
             </Button>
             <Button
               size="lg"

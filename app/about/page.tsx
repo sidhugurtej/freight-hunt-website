@@ -235,7 +235,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact">Get a Quote</Link>
+              <Link href="/contact#quote-form">Get a Quote</Link>
             </Button>
             <Button
               size="lg"

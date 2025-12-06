@@ -35,12 +35,43 @@ export function ContactPageContent() {
         destination: "",
         notes: ""
     })
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        const subject = "Freight Quote Request"
-        const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0ACargo Type: ${formData.cargoType}%0D%0AService: ${formData.service}%0D%0AOrigin: ${formData.origin}%0D%0ADestination: ${formData.destination}%0D%0ANotes: ${formData.notes}`
-        window.location.href = `mailto:info@freighthunt.us?subject=${subject}&body=${body}`
+        setIsSubmitting(true)
+        setSubmitStatus('idle')
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+
+            if (response.ok) {
+                setSubmitStatus('success')
+                setFormData({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    cargoType: "",
+                    service: "",
+                    origin: "",
+                    destination: "",
+                    notes: ""
+                })
+            } else {
+                setSubmitStatus('error')
+            }
+        } catch (error) {
+            setSubmitStatus('error')
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -130,7 +161,7 @@ export function ContactPageContent() {
                                     {/* Row 1: Name & Email */}
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div className="space-y-2">
-                                            <Label htmlFor="name">Full Name*</Label>
+                                            <Label htmlFor="name">Full Name *</Label>
                                             <Input
                                                 id="name"
                                                 name="name"
@@ -142,7 +173,7 @@ export function ContactPageContent() {
                                             />
                                         </div>
                                         <div className="space-y-2">
-                                            <Label htmlFor="email">Email*</Label>
+                                            <Label htmlFor="email">Email *</Label>
                                             <Input
                                                 id="email"
                                                 name="email"
@@ -159,7 +190,7 @@ export function ContactPageContent() {
                                     {/* Row 2: Phone & Cargo Type */}
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div className="space-y-2">
-                                            <Label htmlFor="phone">Phone Number*</Label>
+                                            <Label htmlFor="phone">Phone Number *</Label>
                                             <Input
                                                 id="phone"
                                                 name="phone"
@@ -172,7 +203,7 @@ export function ContactPageContent() {
                                             />
                                         </div>
                                         <div className="space-y-2">
-                                            <Label htmlFor="cargoType">Cargo Type*</Label>
+                                            <Label htmlFor="cargoType">Cargo Type *</Label>
                                             <Input
                                                 id="cargoType"
                                                 name="cargoType"
@@ -200,13 +231,12 @@ export function ContactPageContent() {
                                                     <SelectItem value="rftl">RFTL (Reefer Full)</SelectItem>
                                                     <SelectItem value="rail">Rail Intermodal</SelectItem>
                                                     <SelectItem value="drayage">Drayage Shipment</SelectItem>
-                                                    <SelectItem value="air">Air Freight</SelectItem>
-                                                    <SelectItem value="sea">Sea Freight</SelectItem>
+                                                    <SelectItem value="other">Other</SelectItem>
                                                 </SelectContent>
                                             </Select>
                                         </div>
                                         <div className="space-y-2">
-                                            <Label htmlFor="origin">Origin</Label>
+                                            <Label htmlFor="origin">Origin *</Label>
                                             <Input
                                                 id="origin"
                                                 name="origin"
@@ -221,7 +251,7 @@ export function ContactPageContent() {
 
                                     {/* Row 4: Destination */}
                                     <div className="space-y-2">
-                                        <Label htmlFor="destination">Destination</Label>
+                                        <Label htmlFor="destination">Destination*</Label>
                                         <Input
                                             id="destination"
                                             name="destination"
@@ -246,9 +276,16 @@ export function ContactPageContent() {
                                         />
                                     </div>
 
-                                    <Button type="submit" size="lg" className="w-full text-lg font-bold shadow-md hover:shadow-lg transition-all bg-primary hover:bg-primary/90 text-primary-foreground border-none">
-                                        Submit Now
+                                    <Button type="submit" size="lg" className="w-full text-lg font-bold shadow-md hover:shadow-lg transition-all bg-primary hover:bg-primary/90 text-primary-foreground border-none" disabled={isSubmitting}>
+                                        {isSubmitting ? 'Submitting...' : 'Submit Now'}
                                     </Button>
+
+                                    {submitStatus === 'success' && (
+                                        <p className="text-center text-sm text-green-600 font-medium">Thank you! We'll respond shortly.</p>
+                                    )}
+                                    {submitStatus === 'error' && (
+                                        <p className="text-center text-sm text-red-600 font-medium">Something went wrong. Please try again or call us.</p>
+                                    )}
 
                                     <p className="text-center text-xs text-muted-foreground mt-4">
                                         Our team will respond with your free quote shortly.
