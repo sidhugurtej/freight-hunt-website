@@ -33,6 +33,7 @@ const services = [
   {
     id: "ftl",
     icon: Truck,
+    image: "/full-truckload-semi-truck-on-highway-professional.jpg",
     title: "Full Truckload (FTL)",
     tag: "Best for: High Volume",
     description:
@@ -50,6 +51,7 @@ const services = [
   {
     id: "ltl",
     icon: Package,
+    image: "/ltl-service-pallets-warehouse.jpg",
     title: "Less Than Truckload (LTL)",
     tag: "Best for: Small Shipments",
     description:
@@ -67,6 +69,7 @@ const services = [
   {
     id: "expedited",
     icon: Zap,
+    image: "/expedited-shipping-fast-delivery.jpg",
     title: "Expedited Shipping",
     tag: "Best for: Time Critical",
     description:
@@ -85,6 +88,7 @@ const services = [
   {
     id: "temperature",
     icon: Snowflake,
+    image: "/refrigerated-reefer-truck-cold-chain-logistics-tem.jpg",
     title: "Temperature Controlled",
     tag: "Best for: Perishables",
     description:
@@ -102,6 +106,7 @@ const services = [
   {
     id: "crossborder",
     icon: Globe,
+    image: "/cross-border-shipping-international.jpg",
     title: "Cross-Border Shipping",
     tag: "Best for: International",
     description: "Seamless freight transportation across the US, Canada, and Mexico borders with full customs support.",
@@ -118,6 +123,7 @@ const services = [
   {
     id: "flatbed",
     icon: Layers,
+    image: "/oversized-heavy-haul-freight-truck-carrying-large.jpg",
     title: "Flatbed & Specialized",
     tag: "Best for: Oversized/Construction",
     description: "Open deck trailers for transporting machinery, building materials, and oversized loads that cannot fit in a standard dry van.",
@@ -134,6 +140,7 @@ const services = [
   {
     id: "drayage",
     icon: Container,
+    image: "/drayage-port-container-operations.jpg",
     title: "Drayage Services",
     tag: "Best for: Port Logistics",
     description: "Specialized transport for shipping containers between ports, rail ramps, and nearby warehouses or rail yards.",
@@ -150,6 +157,7 @@ const services = [
   {
     id: "warehousing",
     icon: Warehouse,
+    image: "/warehouse-logistics-worker-with-tablet-managing-fr.jpg",
     title: "Flexible Warehousing and Distribution",
     tag: "Best for: Storage & Distribution",
     description:
@@ -246,36 +254,12 @@ export default function ServicesPage() {
                     </Button>
                   </div>
                   <div
-                    className={`flex items-center justify-center min-h-[300px] lg:min-h-full p-6 ${index % 2 === 1 ? "lg:order-1" : ""}`}
+                    className={`flex items-center justify-center min-h-[300px] lg:min-h-full p-0 overflow-hidden ${index % 2 === 1 ? "lg:order-1" : ""}`}
                   >
                     <img
-                      src={
-                        service.id === "ftl"
-                          ? "/full-truckload-semi-truck-on-highway-professional.jpg"
-                          : service.id === "ltl"
-                            ? "/retail-warehouse-boxes.jpg"
-                            : service.id === "expedited"
-                              ? "/aerial-view-of-highway-with-semi-trucks-and-freigh.jpg"
-                              : service.id === "specialized"
-                                ? "/oversized-heavy-haul-freight-truck-carrying-large.jpg"
-                                : service.id === "temperature"
-                                  ? "/refrigerated-reefer-truck-cold-chain-logistics-tem.jpg"
-                                  : service.id === "crossborder"
-                                    ? "/shipping-warehouse-logistics-operations.jpg"
-                                    : service.id === "warehousing"
-                                      ? "/retail-warehouse-boxes.jpg"
-                                      : service.id === "flatbed"
-                                        ? "/oversized-heavy-haul-freight-truck-carrying-large.jpg"
-                                        : service.id === "drayage"
-                                          ? "/shipping-warehouse-logistics-operations.jpg"
-                                          : service.id === "air"
-                                            ? "/aerial-view-of-highway-with-semi-trucks-and-freigh.jpg"
-                                            : service.id === "ocean"
-                                              ? "/placeholder.jpg"
-                                              : "/placeholder.jpg"
-                      }
+                      src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover rounded-2xl shadow-md"
+                      className="w-full h-full object-cover rounded-2xl"
                     />
                   </div>
                 </div>
