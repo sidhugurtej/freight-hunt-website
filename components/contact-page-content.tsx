@@ -37,25 +37,50 @@ export function ContactPageContent() {
     })
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-    const [emailError, setEmailError] = useState<string>("")
+    const [errors, setErrors] = useState<{
+        email?: string
+        phone?: string
+        general?: string
+    }>({})
 
     const validateEmail = (email: string): boolean => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
         return emailRegex.test(email)
     }
 
+    const validatePhone = (phone: string): boolean => {
+        // Remove all non-digit characters
+        const digitsOnly = phone.replace(/\D/g, '')
+        // Valid if 10 or 11 digits (with or without country code)
+        return digitsOnly.length >= 10 && digitsOnly.length <= 11
+    }
+
+    const validateForm = (): boolean => {
+        const newErrors: { email?: string; phone?: string } = {}
+
+        if (!validateEmail(formData.email)) {
+            newErrors.email = "Please enter a valid email address"
+        }
+
+        if (!validatePhone(formData.phone)) {
+            newErrors.phone = "Please enter a valid phone number (10 digits)"
+        }
+
+        setErrors(newErrors)
+        return Object.keys(newErrors).length === 0
+    }
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
 
-        // Validate email before submitting
-        if (!validateEmail(formData.email)) {
-            setEmailError("Please enter a valid email address")
+        // Validate all fields
+        if (!validateForm()) {
             return
         }
 
         setIsSubmitting(true)
         setSubmitStatus('idle')
-        setEmailError("")
+        setErrors({})
 
         try {
             const response = await fetch('/api/contact', {
@@ -79,9 +104,12 @@ export function ContactPageContent() {
                     notes: ""
                 })
             } else {
+                const data = await response.json()
+                setErrors({ general: data.error || 'Something went wrong. Please try again.' })
                 setSubmitStatus('error')
             }
         } catch (error) {
+            setErrors({ general: 'Network error. Please check your connection and try again.' })
             setSubmitStatus('error')
         } finally {
             setIsSubmitting(false)
@@ -92,9 +120,21 @@ export function ContactPageContent() {
         const { name, value } = e.target
         setFormData({ ...formData, [name]: value })
 
-        // Clear email error when user types
-        if (name === 'email' && emailError) {
-            setEmailError("")
+        // Clear field-specific errors when user types
+        if (errors[name as keyof typeof errors]) {
+            setErrors({ ...errors, [name]: undefined })
+        }
+    }
+
+    const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { value } = e.target
+        // Only allow digits, spaces, parentheses, and hyphens
+        const filtered = value.replace(/[^\d\s()-]/g, '')
+        setFormData({ ...formData, phone: filtered })
+
+        // Clear phone error when user types
+        if (errors.phone) {
+            setErrors({ ...errors, phone: undefined })
         }
     }
 
@@ -200,12 +240,12 @@ export function ContactPageContent() {
                                                 type="email"
                                                 placeholder="john@company.com"
                                                 required
-                                                className={`bg-muted/30 ${emailError ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                                                className={`bg-muted/30 ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                                                 value={formData.email}
                                                 onChange={handleChange}
                                             />
-                                            {emailError && (
-                                                <p className="text-sm text-red-600 mt-1">{emailError}</p>
+                                            {errors.email && (
+                                                <p className="text-sm text-red-600 mt-1">{errors.email}</p>
                                             )}
                                         </div>
                                     </div>
@@ -220,10 +260,13 @@ export function ContactPageContent() {
                                                 type="tel"
                                                 placeholder="(555) 000-0000"
                                                 required
-                                                className="bg-muted/30"
+                                                className={`bg-muted/30 ${errors.phone ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                                                 value={formData.phone}
-                                                onChange={handleChange}
+                                                onChange={handlePhoneChange}
                                             />
+                                            {errors.phone && (
+                                                <p className="text-sm text-red-600 mt-1">{errors.phone}</p>
+                                            )}
                                         </div>
                                         <div className="space-y-2">
                                             <Label htmlFor="cargoType">Cargo Type *</Label>
@@ -298,6 +341,10 @@ export function ContactPageContent() {
                                             onChange={handleChange}
                                         />
                                     </div>
+
+                                    {errors.general && (
+                                        <p className="text-sm text-red-600 text-center font-medium">{errors.general}</p>
+                                    )}
 
                                     <Button type="submit" size="lg" className="w-full text-lg font-bold shadow-md hover:shadow-lg transition-all bg-primary hover:bg-primary/90 text-primary-foreground border-none" disabled={isSubmitting}>
                                         {isSubmitting ? 'Submitting...' : 'Submit Now'}
