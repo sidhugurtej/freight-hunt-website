@@ -3,16 +3,8 @@ import { Footer } from "@/components/footer"
 import { PageHeader } from "@/components/page-header"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
 import Link from "next/link"
-import { CheckCircle, DollarSign, Truck, Fuel, CreditCard, MapPin, PhoneCall, Shield, TrendingUp } from "lucide-react"
+import { CheckCircle, DollarSign, Fuel, CreditCard, MapPin, PhoneCall, Shield, TrendingUp } from "lucide-react"
 
 const benefits = [
   {
@@ -54,15 +46,6 @@ const requirements = [
   "Satisfactory safety rating",
   "Valid operating authority for at least 6 months",
   "Clean CSA scores",
-]
-
-const equipmentTypes = [
-  { name: "Dry Van", loads: "High Volume" },
-  { name: "Flatbed", loads: "Steady" },
-  { name: "Reefer", loads: "High Volume" },
-  { name: "Step Deck", loads: "Moderate" },
-  { name: "Lowboy", loads: "Moderate" },
-  { name: "Power Only", loads: "Available" },
 ]
 
 import type { Metadata } from "next"
@@ -136,47 +119,7 @@ export default function CarriersPage() {
         </div>
       </section>
 
-      {/* Equipment Types */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-primary mb-4">Equipment We Need</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              We work with a variety of equipment types. If you have quality equipment and a commitment to service, we
-              want to hear from you.
-            </p>
-          </div>
-          <div className="max-w-3xl mx-auto">
-            <Card className="border-0 shadow-md overflow-hidden">
-              <Table>
-                <TableHeader>
-                  <TableRow className="bg-muted/50 hover:bg-muted/50">
-                    <TableHead className="w-[50%] pl-6">Equipment Type</TableHead>
-                    <TableHead className="pl-6">Volume Availability</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {equipmentTypes.map((equipment) => (
-                    <TableRow key={equipment.name} className="hover:bg-muted/5">
-                      <TableCell className="font-medium pl-6">
-                        <div className="flex items-center gap-3">
-                          <Truck className="h-4 w-4 text-primary" />
-                          {equipment.name}
-                        </div>
-                      </TableCell>
-                      <TableCell className="pl-6">
-                        <span className="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
-                          {equipment.loads}
-                        </span>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </Card>
-          </div>
-        </div>
-      </section>
+
 
       {/* Requirements */}
       <section className="py-20 bg-muted/30">

@@ -9,7 +9,6 @@ import {
   Package,
   Zap,
   Snowflake,
-  AlertTriangle,
   Globe,
   CheckCircle,
   ArrowRight,
@@ -19,6 +18,9 @@ import {
   Headphones,
   Star,
   Quote,
+  Warehouse,
+  Container,
+  Layers,
 } from "lucide-react"
 import type { Metadata } from "next"
 
@@ -79,22 +81,7 @@ const services = [
     ],
     benefits: "When deadlines are critical, we deliver without compromise.",
   },
-  {
-    id: "specialized",
-    icon: AlertTriangle,
-    title: "Specialized Freight",
-    tag: "Best for: Oversized/Complex",
-    description: "Heavy haul, oversized, and unique freight solutions requiring special permits and equipment.",
-    useCases: "Common use cases: Heavy machinery transport, infrastructure components, energy sector equipment.",
-    features: [
-      "Oversized and overweight loads",
-      "Heavy machinery and equipment",
-      "Permit management included",
-      "Escort and pilot car services",
-      "Route surveys and planning",
-    ],
-    benefits: "We handle the complex logistics of moving your most challenging freight.",
-  },
+
   {
     id: "temperature",
     icon: Snowflake,
@@ -127,6 +114,55 @@ const services = [
       "Compliance management",
     ],
     benefits: "Simplify international shipping with our experienced cross-border team.",
+  },
+  {
+    id: "flatbed",
+    icon: Layers,
+    title: "Flatbed & Specialized",
+    tag: "Best for: Oversized/Construction",
+    description: "Open deck trailers for transporting machinery, building materials, and oversized loads that cannot fit in a standard dry van.",
+    useCases: "Common use cases: Construction materials, heavy machinery, piping, lumber, industrial equipment.",
+    features: [
+      "Standard Flatbeds & Step Decks",
+      "Conestoga & Curtainside options",
+      "Oversized load permits",
+      "Tarping and strapping included",
+      "Job site deliveries",
+    ],
+    benefits: "Expert handling for your heaviest and most awkward cargo.",
+  },
+  {
+    id: "drayage",
+    icon: Container,
+    title: "Drayage Services",
+    tag: "Best for: Port Logistics",
+    description: "Specialized transport for shipping containers between ports, rail ramps, and nearby warehouses or rail yards.",
+    useCases: "Common use cases: Import/Export container haulage, port-to-warehouse transfers, rail ramp pickups.",
+    features: [
+      "Port & Rail ramp access",
+      "TWIC certified drivers",
+      "Chassis availability",
+      "Container tracking",
+      "Demurrage management",
+    ],
+    benefits: "Efficient first and last mile moves for your international supply chain.",
+  },
+  {
+    id: "warehousing",
+    icon: Warehouse,
+    title: "Flexible Warehousing and Distribution",
+    tag: "Best for: Storage & Distribution",
+    description:
+      "Our strategically positioned warehouses boast top-notch facilities managed by seasoned experts. From inventory oversight to order processing, we deliver flexible warehousing and distribution services designed to optimize your inventory levels and streamline operations.",
+    useCases: "Common use cases: Regional distribution, inventory management, order fulfillment, cross-docking.",
+    features: [
+      "Strategically positioned facilities",
+      "Expert inventory oversight",
+      "Order processing services",
+      "Flexible storage options",
+      "Streamlined operations management",
+    ],
+    benefits: "Optimize inventory levels and streamline your supply chain operations.",
   },
 ]
 
@@ -226,7 +262,17 @@ export default function ServicesPage() {
                                   ? "/refrigerated-reefer-truck-cold-chain-logistics-tem.jpg"
                                   : service.id === "crossborder"
                                     ? "/shipping-warehouse-logistics-operations.jpg"
-                                    : "/placeholder.jpg"
+                                    : service.id === "warehousing"
+                                      ? "/retail-warehouse-boxes.jpg"
+                                      : service.id === "flatbed"
+                                        ? "/oversized-heavy-haul-freight-truck-carrying-large.jpg"
+                                        : service.id === "drayage"
+                                          ? "/shipping-warehouse-logistics-operations.jpg"
+                                          : service.id === "air"
+                                            ? "/aerial-view-of-highway-with-semi-trucks-and-freigh.jpg"
+                                            : service.id === "ocean"
+                                              ? "/placeholder.jpg"
+                                              : "/placeholder.jpg"
                       }
                       alt={service.title}
                       className="w-full h-full object-cover rounded-2xl shadow-md"

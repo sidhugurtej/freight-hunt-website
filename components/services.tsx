@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Truck, Package, Shield, Clock, MapPin, HeadphonesIcon } from "lucide-react"
+import { Truck, Package, Snowflake, Container, Globe, Warehouse, Layers, Zap } from "lucide-react"
 
 const services = [
   {
@@ -13,24 +13,34 @@ const services = [
     description: "Cost-effective shipping for smaller loads that don't require a full truck.",
   },
   {
-    icon: Shield,
-    title: "Vetted Carriers",
-    description: "Every carrier in our network is thoroughly vetted for safety, reliability, and compliance.",
+    icon: Zap,
+    title: "Expedited Shipping",
+    description: "Time-critical freight solutions when every minute counts. Guaranteed delivery.",
   },
   {
-    icon: Clock,
-    title: "Real-Time Tracking",
-    description: "Know exactly where your freight is at all times with our advanced tracking system.",
+    icon: Snowflake,
+    title: "Reefer / Temperature Controlled",
+    description: "Refrigerated trailers for frozen and temperature-sensitive freight.",
   },
   {
-    icon: MapPin,
-    title: "Nationwide Coverage",
-    description: "From coast to coast, we have the network to move your freight anywhere.",
+    icon: Layers,
+    title: "Flatbed & Specialized",
+    description: "Transport heavily, oversized, or irregular goods that require open trailer equipment.",
   },
   {
-    icon: HeadphonesIcon,
-    title: "Dedicated Support",
-    description: "Our logistics experts are available 24/7 to ensure your shipments run smoothly.",
+    icon: Container,
+    title: "Drayage",
+    description: "Short-distance container transport connecting ports, rail ramps, and local warehouses.",
+  },
+  {
+    icon: Globe,
+    title: "Cross-Border Shipping",
+    description: "Seamless freight transportation across U.S., Canada, and Mexico borders.",
+  },
+  {
+    icon: Warehouse,
+    title: "Warehousing",
+    description: "Flexible storage and distribution services to optimize your supply chain.",
   },
 ]
 
@@ -44,8 +54,7 @@ export function Services() {
             Comprehensive Freight Solutions
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            From full truckloads to specialized freight, we provide end-to-end logistics solutions tailored to your
-            business needs.
+            From road to sea to air, we provide every mode of transport to keep your supply chain moving.
           </p>
         </div>
 

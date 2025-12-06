@@ -30,7 +30,7 @@ const values = [
 ]
 
 const stats = [
-  { value: "15+", label: "Years Experience" },
+  { value: "8+", label: "Years Experience" },
   { value: "10,000+", label: "Loads Delivered" },
   { value: "500+", label: "Carrier Partners" },
   { value: "98%", label: "On-Time Rate" },
@@ -90,7 +90,7 @@ export default function AboutPage() {
                   with unreliable shipping, lack of transparency, and poor communication.
                 </p>
                 <p>
-                  Founded in 2009, we set out to change that. Starting as a small operation with just a handful of
+                  Founded in 2017, we set out to change that. Starting as a small operation with just a handful of
                   trusted carriers, we focused on building relationships based on trust, reliability, and exceptional
                   service.
                 </p>

@@ -9,7 +9,7 @@ const footerLinks = {
     { name: "Full Truckload (FTL)", href: "/services#ftl" },
     { name: "Less Than Truckload (LTL)", href: "/services#ltl" },
     { name: "Expedited Shipping", href: "/services#expedited" },
-    { name: "Specialized Freight", href: "/services#specialized" },
+    { name: "Flatbed & Specialized", href: "/services#flatbed" },
   ],
   company: [
     { name: "About Us", href: "/about" },
@@ -52,7 +52,9 @@ export function Footer() {
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
                 >
                   <Phone className="h-4 w-4 group-hover:text-primary transition-colors" />
-                  <span className="text-sm">(817) 256-8492</span>
+                  <span className="text-sm">
+                    (817) 256-8492 <span className="text-xs opacity-70 ml-1">24/7 Dispatch</span>
+                  </span>
                 </a>
                 <a
                   href="mailto:info@freighthunt.us"

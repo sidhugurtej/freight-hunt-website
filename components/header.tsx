@@ -75,8 +75,8 @@ export function Header() {
                 </div>
                 <div className="mt-8">
                   <Button className="w-full text-lg h-12" asChild>
-                    <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
-                      Get a Freight Quote
+                    <Link href="/contact#quote-form" onClick={() => setMobileMenuOpen(false)}>
+                      Get a Free Quote
                     </Link>
                   </Button>
                 </div>
@@ -102,7 +102,7 @@ export function Header() {
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Button asChild>
-            <Link href="/contact">Get a Freight Quote</Link>
+            <Link href="/contact#quote-form">Get a Free Quote</Link>
           </Button>
         </div>
       </nav>

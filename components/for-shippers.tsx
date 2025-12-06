@@ -24,7 +24,7 @@ export function ForShippers() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 bg-accent text-accent-foreground rounded-xl p-6 shadow-xl">
+            <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground rounded-xl p-6 shadow-xl">
               <p className="text-3xl font-bold">98%</p>
               <p className="text-sm">On-Time Rate</p>
             </div>
@@ -43,7 +43,7 @@ export function ForShippers() {
             <ul className="mt-8 space-y-4">
               {benefits.map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-foreground">{benefit}</span>
                 </li>
               ))}
