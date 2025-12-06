@@ -247,7 +247,7 @@ export default function AboutPage() {
             </Button>
           </div>
           <p className="mt-8 text-sm text-primary-foreground/70">
-            Get a response within 15 minutes. No obligation required.
+            Get a fast response. No obligation required.
           </p>
         </div>
       </section>

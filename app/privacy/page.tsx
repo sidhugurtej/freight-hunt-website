@@ -48,19 +48,19 @@ export default function PrivacyPage() {
 
           <h2 className="text-2xl font-bold text-primary mb-4">5. Your Rights</h2>
           <p className="text-muted-foreground mb-6 leading-relaxed">
-            You may access, update, or delete your personal information by contacting us at info@freighthunt.us. You may
+            You may access, update, or delete your personal information by contacting us at <a href="mailto:info@freighthunt.us" className="text-primary hover:underline">info@freighthunt.us</a>. You may
             also opt out of receiving promotional communications from us by following the instructions in those
             messages.
           </p>
 
           <h2 className="text-2xl font-bold text-primary mb-4">6. Contact Us</h2>
           <p className="text-muted-foreground mb-6 leading-relaxed">
-            If you have any questions about this Privacy Policy, please contact us at info@freighthunt.us:
+            If you have any questions about this Privacy Policy, please contact us at <a href="mailto:info@freighthunt.us" className="text-primary hover:underline">info@freighthunt.us</a>:
             <br />
             <br />
             Freight Hunt
             <br />
-            Email: info@freighthunt.us
+            Email: <a href="mailto:info@freighthunt.us" className="text-primary hover:underline">info@freighthunt.us</a>
             <br />
             Phone: (817) 256-8492
           </p>

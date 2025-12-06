@@ -17,12 +17,12 @@ const faqCategories = [
       {
         question: "What areas do you serve?",
         answer:
-          "We provide freight brokerage services across all 48 continental United States. We also offer cross-border shipping services to Canada and Mexico through our partner network.",
+          "We provide freight brokerage services nationwide across the United States. We also offer cross-border shipping services to Canada and Mexico through our partner network.",
       },
       {
         question: "How do I get a freight quote?",
         answer:
-          "Getting a quote is easy! Simply contact us via phone at (817) 256-8492, email us at info@freighthunt.us, or fill out our online contact form. Provide your origin, destination, commodity type, weight, and desired pickup date, and we'll provide competitive rates.",
+          "Getting a quote is easy! Simply contact us via phone at (817) 256-8492, email us at info@freighthunt.us, or fill out our online quote form. Provide your origin, destination, commodity type, weight, and desired pickup date, and we'll provide competitive rates.",
       },
       {
         question: "What types of freight do you handle?",
@@ -62,7 +62,7 @@ const faqCategories = [
       {
         question: "How do I sign up as a carrier?",
         answer:
-          "Contact our carrier relations team at (817) 256-8492 or complete our online carrier application. We'll verify your authority, insurance, and safety record. Approved carriers can start hauling loads within 24 hours.",
+          "Contact our carrier relations team at (817) 256-8492 or fill out our online contact form. We'll verify your authority, insurance, and safety record. Approved carriers can start hauling loads within 24 hours.",
       },
       {
         question: "What are your payment terms for carriers?",
@@ -130,10 +130,10 @@ export default function FAQPage() {
         <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold tracking-tight text-primary mb-4">Still Have Questions?</h2>
           <p className="text-muted-foreground mb-8">
-            Our team is here to help. Contact us and we'll get back to you within 2 hours.
+            Our team is here to help. Contact us and we'll get back to you promptly.
           </p>
           <Button size="lg" asChild>
-            <Link href="/contact">Contact Us</Link>
+            <Link href="/contact#quote-form">Contact Us</Link>
           </Button>
         </div>
       </section>

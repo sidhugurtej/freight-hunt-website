@@ -75,12 +75,12 @@ export default function TermsPage() {
 
           <h2 className="text-2xl font-bold text-primary mb-4">9. Contact Information</h2>
           <p className="text-muted-foreground mb-6 leading-relaxed">
-            If you have any questions about these Terms, please contact us at info@freighthunt.us:
+            If you have any questions about these Terms, please contact us at <a href="mailto:info@freighthunt.us" className="text-primary hover:underline">info@freighthunt.us</a>:
             <br />
             <br />
             Freight Hunt
             <br />
-            Email: info@freighthunt.us
+            Email: <a href="mailto:info@freighthunt.us" className="text-primary hover:underline">info@freighthunt.us</a>
             <br />
             Phone: (817) 256-8492
           </p>

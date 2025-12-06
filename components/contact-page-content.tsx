@@ -302,12 +302,11 @@ export function ContactPageContent() {
                                             </Select>
                                         </div>
                                         <div className="space-y-2">
-                                            <Label htmlFor="origin">Origin *</Label>
+                                            <Label htmlFor="origin">Origin</Label>
                                             <Input
                                                 id="origin"
                                                 name="origin"
                                                 placeholder="City, State or Zip"
-                                                required
                                                 className="bg-muted/30"
                                                 value={formData.origin}
                                                 onChange={handleChange}
@@ -317,12 +316,11 @@ export function ContactPageContent() {
 
                                     {/* Row 4: Destination */}
                                     <div className="space-y-2">
-                                        <Label htmlFor="destination">Destination*</Label>
+                                        <Label htmlFor="destination">Destination</Label>
                                         <Input
                                             id="destination"
                                             name="destination"
                                             placeholder="City, State or Zip"
-                                            required
                                             className="bg-muted/30"
                                             value={formData.destination}
                                             onChange={handleChange}
@@ -346,7 +344,7 @@ export function ContactPageContent() {
                                         <p className="text-sm text-red-600 text-center font-medium">{errors.general}</p>
                                     )}
 
-                                    <Button type="submit" size="lg" className="w-full text-lg font-bold shadow-md hover:shadow-lg transition-all bg-primary hover:bg-primary/90 text-primary-foreground border-none" disabled={isSubmitting}>
+                                    <Button type="submit" size="lg" className="w-full text-lg shadow-md hover:shadow-lg transition-all bg-primary hover:bg-primary/90 text-primary-foreground border-none" disabled={isSubmitting}>
                                         {isSubmitting ? 'Submitting...' : 'Submit Now'}
                                     </Button>
 
@@ -415,7 +413,7 @@ export function ContactPageContent() {
 
                                 <div className="mt-4">
                                     <p className="text-sm text-muted-foreground">
-                                        <span className="font-medium text-foreground">Response time:</span> Usually within 15 minutes
+                                        <span className="font-medium text-foreground">Response time:</span> Fast response guaranteed
                                     </p>
                                 </div>
                             </div>

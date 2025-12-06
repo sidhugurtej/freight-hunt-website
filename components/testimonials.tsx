@@ -5,18 +5,24 @@ const testimonials = [
   {
     content:
       "Freight Hunt has transformed how we manage our supply chain. Their carrier network and responsive team make shipping effortless.",
-    role: "Logistics Director",
+    name: "TJ",
+    company: "Sarjal Group",
+    role: "CEO",
     rating: 5,
   },
   {
     content:
-      "As an owner-operator, finding quality loads is crucial. Freight Hunt delivers consistently with fair rates and quick payment.",
+      "As an owner-operator, finding quality loads is crucial. Freight Hunt delivers consistently with fair rates and quick payment. They truly understand what carriers need.",
+    name: "Harwinder Kahlon",
+    company: "",
     role: "Owner-Operator",
     rating: 5,
   },
   {
     content:
       "The transparency and communication from Freight Hunt is unmatched. We always know where our freight is and when it will arrive.",
+    name: "",
+    company: "",
     role: "Supply Chain Manager",
     rating: 5,
   },
@@ -47,7 +53,13 @@ export function Testimonials() {
                 </div>
                 <p className="text-card-foreground leading-relaxed mb-6">"{testimonial.content}"</p>
                 <div className="border-t border-border pt-4">
-                  <p className="text-card-foreground">{testimonial.role}</p>
+                  {testimonial.name && (
+                    <p className="font-semibold text-card-foreground">{testimonial.name}</p>
+                  )}
+                  {testimonial.company && (
+                    <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                  )}
+                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                 </div>
               </CardContent>
             </Card>
