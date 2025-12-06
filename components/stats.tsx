@@ -1,6 +1,6 @@
 const stats = [
   { id: 1, value: "10K+", label: "Loads Delivered" },
-  { id: 2, value: "500+", label: "Carrier Partners" },
+  { id: 2, value: "100+", label: "Carrier Partners" },
   { id: 3, value: "98%", label: "On-Time Delivery" },
   { id: 4, value: "24/7", label: "Support Available" },
 ]

@@ -3,7 +3,7 @@ import { CheckCircle2, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 const benefits = [
-  "Instant access to a nationwide network of 500+ vetted carriers for faster coverage",
+  "Instant access to a nationwide network of 100+ vetted carriers for faster coverage",
   "Transparent, competitive pricing with no hidden fees to protect your margins",
   "Real-time visibility and tracking so you always know where your freight is",
   "Dedicated account management for personalized service and support",

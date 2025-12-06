@@ -11,7 +11,7 @@ export function Hero() {
           <div className="space-y-8">
             <div>
               <span className="inline-flex items-center rounded-full border border-border bg-secondary px-4 py-1.5 text-sm font-medium text-secondary-foreground">
-                Trusted by 500+ Carriers Nationwide
+                Trusted by 100+ Carriers Nationwide
               </span>
             </div>
 
@@ -34,7 +34,7 @@ export function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
               <div>
-                <div className="text-3xl font-bold text-primary">500+</div>
+                <div className="text-3xl font-bold text-primary">100+</div>
                 <div className="text-sm text-muted-foreground">Carriers</div>
               </div>
               <div>

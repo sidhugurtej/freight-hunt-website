@@ -32,7 +32,7 @@ const values = [
 const stats = [
   { value: "8+", label: "Years Experience" },
   { value: "10,000+", label: "Loads Delivered" },
-  { value: "500+", label: "Carrier Partners" },
+  { value: "100+", label: "Carrier Partners" },
   { value: "98%", label: "On-Time Rate" },
 ]
 
@@ -96,7 +96,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   Today, Freight Hunt has grown into a nationwide freight brokerage, connecting hundreds of shippers
-                  with our network of over 500 vetted carriers. But our core values remain the same: integrity,
+                  with our network of over 100 vetted carriers. But our core values remain the same: integrity,
                   reliability, and a commitment to our partners' success.
                 </p>
               </div>

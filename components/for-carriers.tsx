@@ -50,7 +50,7 @@ export function ForCarriers() {
               <img src="/professional-truck-driver-in-cab-with-modern-fleet.jpg" alt="Carrier partner" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground rounded-xl p-6 shadow-xl">
-              <p className="text-3xl font-bold">500+</p>
+              <p className="text-3xl font-bold">100+</p>
               <p className="text-sm">Carrier Partners</p>
             </div>
           </div>

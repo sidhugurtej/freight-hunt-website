@@ -18,10 +18,10 @@ import {
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Shippers", href: "/shippers" },
   { name: "Carriers", href: "/carriers" },
+  { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ]
 
@@ -31,7 +31,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="flex items-center gap-3">
             <Logo className="w-48 h-24" />
